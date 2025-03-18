@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: blog-posts
+
+website:
+  title: "BK Advisors Blog"
+  navbar:
+    background: light
+    search: true
+    left:
+      - text: "Home"
+        href: index.html
+    right:
+      - icon: github
+        href: https://github.com/yourusername
+
+format:
+  html:
+    theme: cosmo
+    css: blog.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+
+execute:
+  freeze: auto

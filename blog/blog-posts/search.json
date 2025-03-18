@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "blog-template.html",
+    "href": "blog-template.html",
+    "title": "Blog Post Title",
+    "section": "",
+    "text": "Brief introduction to the topic and why it matters for development finance/management."
+  },
+  {
+    "objectID": "blog-template.html#overview",
+    "href": "blog-template.html#overview",
+    "title": "Blog Post Title",
+    "section": "",
+    "text": "Brief introduction to the topic and why it matters for development finance/management."
+  },
+  {
+    "objectID": "blog-template.html#key-points",
+    "href": "blog-template.html#key-points",
+    "title": "Blog Post Title",
+    "section": "Key Points",
+    "text": "Key Points\n\nFirst Main Point\nYour content here…\n\n\nData Analysis\n\n\nCode\n# Your R code here\n# Example visualization"
+  },
+  {
+    "objectID": "blog-template.html#recommendations",
+    "href": "blog-template.html#recommendations",
+    "title": "Blog Post Title",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nKey takeaway 1\nKey takeaway 2\nKey takeaway 3"
+  },
+  {
+    "objectID": "blog-template.html#references",
+    "href": "blog-template.html#references",
+    "title": "Blog Post Title",
+    "section": "References",
+    "text": "References"
+  }
+]

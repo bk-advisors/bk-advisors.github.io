@@ -1,0 +1,58 @@
+---
+title: "Blog Post Title"
+author: "Author Name"
+date: "2025-03-17"
+categories: [Financial Management, Data Analysis]
+image: "./assets/grants-mgt.jpg"
+description: "A brief description of your blog post (appears in preview cards)"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    code-fold: true
+    code-tools: true
+    code-copy: true
+---
+
+## Overview
+
+Brief introduction to the topic and why it matters for development finance/management.
+
+## Key Points
+
+### First Main Point
+
+Your content here...
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(knitr)
+# Add other required packages
+```
+
+### Data Analysis
+
+```{r}
+#| label: data-analysis
+#| warning: false
+#| fig-cap: "Figure Description"
+
+# Your R code here
+# Example visualization
+
+```
+
+## Recommendations
+
+- Key takeaway 1
+- Key takeaway 2
+- Key takeaway 3
+
+## References
+
+::: {#refs}
+:::

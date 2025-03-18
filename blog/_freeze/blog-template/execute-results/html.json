@@ -1,0 +1,15 @@
+{
+  "hash": "522707d70aa2d5bb75cd8384bf4d24b9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Blog Post Title\"\nauthor: \"Author Name\"\ndate: \"2025-03-17\"\ncategories: [Financial Management, Data Analysis]\nimage: \"./assets/grants-mgt.jpg\"\ndescription: \"A brief description of your blog post (appears in preview cards)\"\nformat: \n  html:\n    toc: true\n    toc-depth: 3\n    toc-title: \"Contents\"\n    code-fold: true\n    code-tools: true\n    code-copy: true\n---\n\n\n\n## Overview\n\nBrief introduction to the topic and why it matters for development finance/management.\n\n## Key Points\n\n### First Main Point\n\nYour content here...\n\n\n\n\n\n\n\n### Data Analysis\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Your R code here\n# Example visualization\n```\n:::\n\n\n\n## Recommendations\n\n- Key takeaway 1\n- Key takeaway 2\n- Key takeaway 3\n\n## References\n\n::: {#refs}\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
