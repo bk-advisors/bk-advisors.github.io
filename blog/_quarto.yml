@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: blog-posts
+  output-dir: posts
 
 website:
   title: "BK Advisors Blog"
@@ -9,17 +9,17 @@ website:
     search: true
     left:
       - text: "Home"
-        href: index.html
+        href: https://bk-advisors.github.io/
     right:
       - icon: github
-        href: https://github.com/yourusername
+        href: https://github.com/bk-advisors
 
 format:
   html:
     theme: cosmo
     css: blog.css
     toc: true
-    code-copy: true
+    code-copy: false
     code-overflow: wrap
 
 execute:

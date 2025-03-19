@@ -10,9 +10,10 @@ format:
     toc: true
     toc-depth: 3
     toc-title: "Contents"
-    code-fold: true
-    code-tools: true
-    code-copy: true
+    code-fold: false
+    code-tools: false
+    code-copy: false
+    echo: false
 ---
 
 ## Overview
