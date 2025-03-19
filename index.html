@@ -1,167 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BK Advisors - Blog & Insights</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="https://www.bk-advisors.com/">BK Advisors</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="https://www.bk-advisors.com/#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.bk-advisors.com/#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.bk-advisors.com/#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="https://bk-advisors.github.io/">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.bk-advisors.com/#clients">Clients</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.bk-advisors.com/#contact">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="https://www.bk-advisors.com/"
+          >BK Advisors</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.bk-advisors.com/#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.bk-advisors.com/#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.bk-advisors.com/#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="https://bk-advisors.github.io/"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.bk-advisors.com/#clients"
+                >Clients</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.bk-advisors.com/#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Blog Header -->
     <header class="py-5 bg-light">
-        <div class="container">
-            <h1 class="text-center mb-4">Insights & Analysis</h1>
-            <p class="text-center lead">Expert perspectives on development finance, data science, and sustainable impact.</p>
-        </div>
+      <div class="container">
+        <h1 class="text-center mb-4">Insights & Analysis</h1>
+        <p class="text-center lead">
+          Expert perspectives on development finance, data science, and
+          sustainable impact.
+        </p>
+      </div>
     </header>
 
     <!-- Blog Categories -->
     <section class="py-5">
-        <div class="container">
-            <!-- Category Navigation -->
-            <ul class="nav nav-pills mb-5 justify-content-center" id="blogTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all" type="button">All Posts</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#business" type="button">Business Development</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#grants" type="button">Grants Management</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#finance" type="button">Financial Management</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#data" type="button">Data & Analytics</button>
-                </li>
-            </ul>
+      <div class="container">
+        <!-- Category Navigation -->
+        <ul
+          class="nav nav-pills mb-5 justify-content-center"
+          id="blogTabs"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              data-bs-toggle="pill"
+              data-bs-target="#all"
+              type="button"
+            >
+              All Posts
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#business"
+              type="button"
+            >
+              Business Development
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#grants"
+              type="button"
+            >
+              Grants Management
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#finance"
+              type="button"
+            >
+              Financial Management
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#data"
+              type="button"
+            >
+              Data & Analytics
+            </button>
+          </li>
+        </ul>
 
-            <!-- Blog Posts Container -->
-            <div class="tab-content" id="blogTabContent">
-                <!-- All Posts -->
-                <div class="tab-pane fade show active" id="all">
-                    <div class="row g-4">
-                        <!-- Featured Post -->
-                        <div class="col-12 mb-4">
-                            <div class="card border-0 shadow-sm">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="./assets/health-financing.jpg" class="img-fluid rounded-start" alt="Featured Post">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <span class="badge bg-primary mb-2">Financial Management</span>
-                                            <h3 class="card-title">Sustainable Health Financing</h3>
-                                            <p class="card-text">An analysis to better understand and differentiate "richer" countries most at risk of not providing a sustainable health system.</p>
-                                            <p class="card-text"><small class="text-muted">Published March 15, 2025</small></p>
-                                            <a href="https://bk-advisors.github.io/blog/posts/blog-template.html" class="btn btn-outline-primary">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Regular Posts -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <img src="./assets/grants-mgt.jpg" class="card-img-top" alt="Blog Post">
-                                <div class="card-body">
-                                    <span class="badge bg-success mb-2">Grants Management</span>
-                                    <h5 class="card-title">Navigating Grants Management</h5>
-                                    <p class="card-text">Explore effective strategies for managing grants in the ever-evolving global development landscape.</p>
-                                    <p class="card-text"><small class="text-muted">Published March 10, 2025</small></p>
-                                </div>
-                                <div class="card-footer bg-transparent border-0">
-                                    <a href="https://bk-advisors.github.io/blog/posts/blog-template.html" class="btn btn-outline-primary">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <img src="./assets/grants-mgt.jpg" class="card-img-top" alt="Blog Post">
-                                <div class="card-body">
-                                    <span class="badge bg-success mb-2">Grants Management</span>
-                                    <h5 class="card-title">Navigating Grants Management</h5>
-                                    <p class="card-text">Explore effective strategies for managing grants in the ever-evolving global development landscape.</p>
-                                    <p class="card-text"><small class="text-muted">Published March 10, 2025</small></p>
-                                </div>
-                                <div class="card-footer bg-transparent border-0">
-                                    <a href="https://bk-advisors.github.io/blog/posts/blog-template.html" class="btn btn-outline-primary">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <img src="./assets/grants-mgt.jpg" class="card-img-top" alt="Blog Post">
-                                <div class="card-body">
-                                    <span class="badge bg-success mb-2">Grants Management</span>
-                                    <h5 class="card-title">Navigating Grants Management</h5>
-                                    <p class="card-text">Explore effective strategies for managing grants in the ever-evolving global development landscape.</p>
-                                    <p class="card-text"><small class="text-muted">Published March 10, 2025</small></p>
-                                </div>
-                                <div class="card-footer bg-transparent border-0">
-                                    <a href="https://bk-advisors.github.io/blog/posts/blog-template.html" class="btn btn-outline-primary">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Add more posts following the same structure -->
+        <!-- Blog Posts Container -->
+        <div class="tab-content" id="blogTabContent">
+          <!-- All Posts -->
+          <div class="tab-pane fade show active" id="all">
+            <div class="row g-4">
+              <!-- Featured Post -->
+              <div class="col-12 mb-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src="./assets/health-financing.jpg"
+                        class="img-fluid rounded-start"
+                        alt="Featured Post"
+                      />
                     </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <span class="badge bg-primary mb-2"
+                          >Financial Management</span
+                        >
+                        <h3 class="card-title">Sustainable Health Financing</h3>
+                        <p class="card-text">
+                          An analysis to better understand and differentiate
+                          "richer" countries most at risk of not providing a
+                          sustainable health system.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-muted"
+                            >Published March 15, 2025</small
+                          >
+                        </p>
+                        <a
+                          href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                          class="btn btn-outline-primary"
+                          >Read More</a
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <!-- Category specific tabs -->
-                <div class="tab-pane fade" id="business">
-                    <!-- Business Development posts -->
+              <!-- Regular Posts -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="./assets/data-mgt.jpg"
+                    class="card-img-top"
+                    alt="Blog Post"
+                  />
+                  <div class="card-body">
+                    <span class="badge bg-success mb-2">Data & Analytics</span>
+                    <span class="badge bg-success mb-2"
+                      >Business Development</span
+                    >
+                    <h5 class="card-title">How To Be Data-Driven</h5>
+                    <p class="card-text">
+                      How leveraging data science can transform project outcomes
+                      and drive sustainable impact.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Published March 19, 2025</small>
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                    <a
+                      href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                      class="btn btn-outline-primary"
+                      >Read More</a
+                    >
+                  </div>
                 </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="./assets/grants-mgt.jpg"
+                    class="card-img-top"
+                    alt="Blog Post"
+                  />
+                  <div class="card-body">
+                    <span class="badge bg-success mb-2">Grants Management</span>
+                    <h5 class="card-title">Navigating Grants Management</h5>
+                    <p class="card-text">
+                      Explore effective strategies for managing grants in the
+                      ever-evolving global development landscape.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Published March 10, 2025</small>
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                    <a
+                      href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                      class="btn btn-outline-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="./assets/pf-mgt.jpg"
+                    class="card-img-top"
+                    alt="Blog Post"
+                  />
+                  <div class="card-body">
+                    <span class="badge bg-success mb-2"
+                      >Financial Management</span
+                    >
+                    <h5 class="card-title">Financial Management</h5>
+                    <p class="card-text">
+                      Explore effective strategies for managing grants in the
+                      ever-evolving global development landscape.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Published March 15, 2025</small>
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                    <a
+                      href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                      class="btn btn-outline-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-                <div class="tab-pane fade" id="grants">
-                    <!-- Grants Management posts -->
-                </div>
-
-                <div class="tab-pane fade" id="finance">
-                    <!-- Financial Management posts -->
-                </div>
-
-                <div class="tab-pane fade" id="data">
-                    <!-- Data & Analytics posts -->
-                </div>
+              <!-- Add more posts following the same structure -->
             </div>
+          </div>
+
+          <!-- Category specific tabs -->
+          <div class="tab-pane fade" id="business">
+            <!-- Business Development posts -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="./assets/data-mgt.jpg"
+                  class="card-img-top"
+                  alt="Blog Post"
+                />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">Data & Analytics</span>
+                  <span class="badge bg-success mb-2"
+                    >Business Development</span
+                  >
+                  <h5 class="card-title">How To Be Data-Driven</h5>
+                  <p class="card-text">
+                    How leveraging data science can transform project outcomes
+                    and drive sustainable impact.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Published March 19, 2025</small>
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <a
+                    href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                    class="btn btn-outline-primary"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="grants">
+            <!-- Grants Management posts -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="./assets/grants-mgt.jpg"
+                  class="card-img-top"
+                  alt="Blog Post"
+                />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">Grants Management</span>
+                  <h5 class="card-title">Navigating Grants Management</h5>
+                  <p class="card-text">
+                    Explore effective strategies for managing grants in the
+                    ever-evolving global development landscape.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Published March 10, 2025</small>
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <a
+                    href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                    class="btn btn-outline-primary"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="finance">
+            <!-- Financial Management posts -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="./assets/pf-mgt.jpg"
+                  class="card-img-top"
+                  alt="Blog Post"
+                />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2"
+                    >Financial Management</span
+                  >
+                  <h5 class="card-title">Financial Management</h5>
+                  <p class="card-text">
+                    Explore effective strategies for managing grants in the
+                    ever-evolving global development landscape.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Published March 15, 2025</small>
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <a
+                    href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                    class="btn btn-outline-primary"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="data">
+            <!-- Data & Analytics posts -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="./assets/data-mgt.jpg"
+                  class="card-img-top"
+                  alt="Blog Post"
+                />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">Data & Analytics</span>
+                  <span class="badge bg-success mb-2"
+                    >Business Development</span
+                  >
+                  <h5 class="card-title">How To Be Data-Driven</h5>
+                  <p class="card-text">
+                    How leveraging data science can transform project outcomes
+                    and drive sustainable impact.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Published March 19, 2025</small>
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <a
+                    href="https://bk-advisors.github.io/blog/posts/blog-template.html"
+                    class="btn btn-outline-primary"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2025 BK Advisors. All Rights Reserved.</p>
-        </div>
+      <div class="container text-center">
+        <p>&copy; 2025 BK Advisors. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
