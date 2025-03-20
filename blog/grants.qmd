@@ -1,0 +1,49 @@
+---
+title: "Best Practices in donor reporting and compliance for first time grant recipients"
+author: "Benedict Akansiima"
+date: "2023-04-26"
+categories: [Grants Management]
+image: "./assets/grants-mgt.jpg"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    code-fold: false
+    code-tools: false
+    code-copy: false
+    echo: false
+---
+
+As an organisation or entity, the thought of first time funding from a donor can be both exciting and a little scary at the same time. However, the thought of how to effectively manage that grant, the people and systems you have in place could raise a few questions or concerns. One might wonder, how best can we deliver on this grant? How can we deliver quality outputs as per the agreement, whilst ensuring the donor is happy with accountability and regularly updated on progress? All these questions and concerns can be addressed by putting in place a few key processes, practices and systems.
+
+## Pre-Award
+
+In the pre-award phase, an organisation should already be researching on or even asking the donor what their reporting requirements are like, and what expectations that particular donor has in terms of reporting and compliance. There are different kinds of donors ranging from multilateral, and bilateral institutions, private foundations and corporations, and each of these have very unique reporting and compliance requirements.
+
+## Project Team (HR) Mobilisation
+
+The first thing for any organisation to have in place is the right people to deliver on the project supported by the grant funding. There should be clearly defined roles and responsibilities, including the reporting lines to ensure that every member of the team is aware of the role they play in project success.
+
+## Project Inception/Kick-off meeting
+
+Once an organisation acquires new funding, it is imperative to organise an inception or kick-off meeting. This meeting should bring together staff from all the relevant departments, with the aim of familiarising with the grant agreement, discussing the expectations, dos and don’t with regards to the project. During this meeting, functions like programme, M&E, HR and finance are able to know what role they play for project success to be achieved. The compliance and reporting requirements should be adequately discussed to ensure understanding by all the different departments.
+
+## Reporting
+
+It is important to develop a reporting schedule and share the reporting templates, both technical and financial with the programme, M&E and finance team members, so they can get an appreciation of them beforehand. In many cases, the templates are shared by the donor and they have clear guidance and description on what information is expected in certain sections, for instance key activities during the reporting period, achievements, challenges and lessons learnt. It is also important to take note of issues like word and character limits so as to keep the information within the donor’s requirements.
+
+## Communication
+
+The organisation should have a clear line of communication with the donor. A focal point must be designated to make all relevant communication pertaining to the project and reporting with the donor. Regular communication and updates with the donor builds positive relationships and makes it easier to resolve any challenges you encounter in a timely manner. It is good for the donor to be kept abreast of key developments even before submission of reports.
+
+## Documentation
+
+The keeping or storage of grant related materials and documents is a good practice that goes a long way to ease reporting and compliance. The important documentation pertaining to a project should be easily accessible by the project team members. An organisation can think of either having a centralised location or drive that can be used to store all relevant information pertaining to the project, right from grant agreements, reports, and communication or visibility materials.
+
+The documentation of key activities as and when they happen, so that once a report is required, there is already something in draft state. This also makes it easier to recall events when they have just taken place and everything is fresh as opposed to waiting to burn the midnight oil many months down the road with pressing deadlines.
+
+## References
+
+::: {#refs}
+:::
