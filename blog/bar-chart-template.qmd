@@ -129,6 +129,42 @@ plt2
 
 
 ```
+## Bar chart - v3 - Adding Labels
+```{r}
+#| label: data-viz-v3
+#| include: true
+#| warning: false
+#| error: false
+#| fig-cap: "Bar Chart - v3 - with Labels"
+
+# Adding Labels
+plt3 <- plt2 + 
+  geom_shadowtext(
+    data = subset(data, count < 8),
+    aes(count, y = name, label = name),
+    hjust = 0,
+    nudge_x = 0.3,
+    colour = BLUE,
+    bg.colour = "white",
+    bg.r = 0.2,
+    family = "Econ Sans Cnd",
+    size = 7
+  ) + 
+  geom_text(
+    data = subset(data, count >= 8),
+    aes(0, y = name, label = name),
+    hjust = 0,
+    nudge_x = 0.3,
+    colour = "white",
+    family = "Econ Sans Cnd",
+    size = 7
+  )
+
+plt3
+
+
+```
+
 
 
 ## References

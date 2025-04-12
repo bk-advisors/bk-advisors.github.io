@@ -208,5 +208,12 @@
     "title": "Bar chart template",
     "section": "Customized Bar chart - v2 layout",
     "text": "Customized Bar chart - v2 layout\n\n# Working on the x and y scales + adjusting the axes\n\nplt2 &lt;- plt + \n  scale_x_continuous(\n    limits = c(0, 55.5),\n    breaks = seq(0, 55, by = 5), \n    expand = c(0, 0), # The horizontal axis does not extend to either side\n    position = \"top\"  # Labels are located on the top\n  ) +\n  \n  # The vertical axis only extends upwards \n  scale_y_discrete(expand = expansion(add = c(0, 0.5))) +\n  theme(\n    \n    # Set background color to white\n    panel.background = element_rect(fill = \"white\"),\n    \n    # Set the color and the width of the grid lines for the horizontal axis\n    panel.grid.major.x = element_line(color = \"#A8BAC4\", size = 0.3),\n    \n    # Remove tick marks by setting their length to 0\n    axis.ticks.length = unit(0, \"mm\"),\n    \n    # Remove the title for both axes\n    axis.title = element_blank(),\n    \n    # Only left line of the vertical axis is painted in black\n    axis.line.y.left = element_line(color = \"black\"),\n    \n    # Remove labels from the vertical axis\n    axis.text.y = element_blank(),\n    \n    # But customize labels for the horizontal axis\n    axis.text.x = element_text(family = \"Econ Sans Cnd\", size = 16)\n  )\n\nplt2\n\n\n\n\nBar Chart - v2"
+  },
+  {
+    "objectID": "bar-chart-template.html#bar-chart---v3---adding-labels",
+    "href": "bar-chart-template.html#bar-chart---v3---adding-labels",
+    "title": "Bar chart template",
+    "section": "Bar chart - v3 - Adding Labels",
+    "text": "Bar chart - v3 - Adding Labels\n\n# Adding Labels\nplt3 &lt;- plt2 + \n  geom_shadowtext(\n    data = subset(data, count &lt; 8),\n    aes(count, y = name, label = name),\n    hjust = 0,\n    nudge_x = 0.3,\n    colour = BLUE,\n    bg.colour = \"white\",\n    bg.r = 0.2,\n    family = \"Econ Sans Cnd\",\n    size = 7\n  ) + \n  geom_text(\n    data = subset(data, count &gt;= 8),\n    aes(0, y = name, label = name),\n    hjust = 0,\n    nudge_x = 0.3,\n    colour = \"white\",\n    family = \"Econ Sans Cnd\",\n    size = 7\n  )\n\nplt3\n\n\n\n\nBar Chart - v3 - with Labels"
   }
 ]

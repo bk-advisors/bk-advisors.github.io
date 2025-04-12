@@ -176,6 +176,7 @@ div.csl-indent {
   <li><a href="#create-dataset" id="toc-create-dataset" class="nav-link" data-scroll-target="#create-dataset">Create dataset</a></li>
   <li><a href="#basic-bar-chart" id="toc-basic-bar-chart" class="nav-link" data-scroll-target="#basic-bar-chart">Basic Bar Chart</a></li>
   <li><a href="#customized-bar-chart---v2-layout" id="toc-customized-bar-chart---v2-layout" class="nav-link" data-scroll-target="#customized-bar-chart---v2-layout">Customized Bar chart - v2 layout</a></li>
+  <li><a href="#bar-chart---v3---adding-labels" id="toc-bar-chart---v3---adding-labels" class="nav-link" data-scroll-target="#bar-chart---v3---adding-labels">Bar chart - v3 - Adding Labels</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -324,6 +325,43 @@ div.csl-indent {
 <figure class="figure">
 <p><img src="bar-chart-template_files/figure-html/data-viz-v2-1.png" class="img-fluid figure-img" width="672"></p>
 <figcaption>Bar Chart - v2</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bar-chart---v3---adding-labels" class="level2">
+<h2 class="anchored" data-anchor-id="bar-chart---v3---adding-labels">Bar chart - v3 - Adding Labels</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding Labels</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt3 <span class="ot">&lt;-</span> plt2 <span class="sc">+</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_shadowtext</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">subset</span>(data, count <span class="sc">&lt;</span> <span class="dv">8</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(count, <span class="at">y =</span> name, <span class="at">label =</span> name),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">hjust =</span> <span class="dv">0</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_x =</span> <span class="fl">0.3</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> BLUE,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">bg.colour =</span> <span class="st">"white"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">bg.r =</span> <span class="fl">0.2</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">"Econ Sans Cnd"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">7</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">subset</span>(data, count <span class="sc">&gt;=</span> <span class="dv">8</span>),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="dv">0</span>, <span class="at">y =</span> name, <span class="at">label =</span> name),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">hjust =</span> <span class="dv">0</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_x =</span> <span class="fl">0.3</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> <span class="st">"white"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">"Econ Sans Cnd"</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">7</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt3</span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bar-chart-template_files/figure-html/data-viz-v3-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Bar Chart - v3 - with Labels</figcaption>
 </figure>
 </div>
 </div>
