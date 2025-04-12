@@ -139,7 +139,7 @@ plt2
 
 # Adding Labels
 plt3 <- plt2 + 
-  geom_shadowtext(
+  geom_shadowtext( # used to draw text with shadow to the right of the bars of the diseases with a count below 8
     data = subset(data, count < 8),
     aes(count, y = name, label = name),
     hjust = 0,
@@ -150,7 +150,7 @@ plt3 <- plt2 +
     family = "Econ Sans Cnd",
     size = 7
   ) + 
-  geom_text(
+  geom_text( # used to draw regular text within the bars of the diseases with a count equal or above 8
     data = subset(data, count >= 8),
     aes(0, y = name, label = name),
     hjust = 0,
@@ -161,6 +161,187 @@ plt3 <- plt2 +
   )
 
 plt3
+
+
+```
+
+## Bar chart - v4 - Adding Annotations and More Tweaks
+```{r}
+#| label: data-viz-v4
+#| include: true
+#| warning: false
+#| error: false
+#| fig-cap: "Bar Chart - v4 - Annotations and More Tweaks"
+
+plt4 <- plt3 +
+  labs(
+    title = "Escape artists",
+    subtitle = "Number of laboratory-acquired infections, 1970-2021"
+  ) + 
+  theme(
+    plot.title = element_text(
+      family = "Econ Sans Cnd", 
+      face = "bold",
+      size = 22
+    ),
+    plot.subtitle = element_text(
+      family = "Econ Sans Cnd",
+      size = 20
+    )
+  )
+
+plt4
+
+```
+## Just a little more, to get it closer to the original
+
+```{r}
+#| label: data-viz-v5
+#| include: true
+#| warning: false
+#| error: false
+#| fig-cap: "Bar Chart - v5 - Top line and other things using the grid library"
+
+# Make room for more annotations
+plt5 <- plt4 + 
+  theme(
+    plot.margin = margin(0.05, 0, 0.1, 0.01, "npc") # top, bottom, left, right
+  )
+
+# Print the ggplot2 plot
+plt5
+
+# Add horizontal line on top
+# It goes from x = 0 (left) to x = 1 (right) on the very top of the chart (y = 1)
+# You can think of 'gp' and 'gpar' as 'graphical parameters'.
+# There we indicate the line color and width
+grid.lines(
+  x = c(0, 1),
+  y = 1,
+  gp = gpar(col = "#e5001c", lwd = 4)
+)
+
+# Add rectangle on top-left
+# lwd = 0 means the rectangle does not have an outer line
+# 'just' gives the horizontal and vertical justification
+grid.rect(
+  x = 0,
+  y = 1,
+  width = 0.05,
+  height = 0.025,
+  just = c("left", "top"),
+  gp = gpar(fill = "#e5001c", lwd = 0)
+)
+
+# We have two captions, so we use grid.text instead of 
+# the caption provided by  ggplot2.
+grid.text(
+  "Sources: Laboratory-Acquired Infection Database; American Biological Safety Association", 
+  x = 0.005, 
+  y = 0.06, 
+  just = c("left", "bottom"),
+  gp = gpar(
+    col = GREY,
+    fontsize = 16,
+    fontfamily = "Econ Sans Cnd"
+  )
+)
+grid.text(
+  "BK Advisors", 
+  x = 0.005, 
+  y = 0.005, 
+  just = c("left", "bottom"),
+  gp = gpar(
+    col = GREY,
+    fontsize = 16,
+    fontfamily = "Milo TE W01"
+  )
+)
+
+
+```
+
+## Final polish - v6
+
+```{r}
+#| label: data-viz-v6
+#| include: true
+#| warning: false
+#| error: false
+#| fig-cap: "Bar Chart - v6 - Final polish"
+
+# Going the extramile
+
+plt6 <- plt5 + 
+  labs(title = NULL, subtitle = NULL) +
+  theme(
+    plot.margin = margin(0.15, 0, 0.1, 0.01, "npc")
+  )
+
+plt6 
+
+grid.text(
+  "Escape artists", 
+  0, 
+  0.925,
+  just = c("left", "bottom"),
+  gp = gpar(
+    fontsize = 22,
+    fontface = "bold",
+    fontfamily = "Econ Sans Cnd"
+  )
+)
+
+grid.text(
+  "Number of laboratory-acquired infections, 1970-2021", 
+  0, 
+  0.875,
+  just = c("left", "bottom"),
+  gp = gpar(
+    fontsize = 20,
+    fontfamily = "Econ Sans Cnd"
+  )
+)
+
+grid.lines(
+  x = c(0, 1),
+  y = 1,
+  gp = gpar(col = "#e5001c", lwd = 4)
+)
+
+grid.rect(
+  x = 0,
+  y = 1,
+  width = 0.05,
+  height = 0.025,
+  just = c("left", "top"),
+  gp = gpar(fill = "#e5001c", lwd = 0)
+)
+
+grid.text(
+  "Sources: Laboratory-Acquired Infection Database; American Biological Safety Association", 
+  x = 0.005, 
+  y = 0.06, 
+  just = c("left", "bottom"),
+  gp = gpar(
+    col = GREY,
+    fontsize = 16,
+    fontfamily = "Econ Sans Cnd"
+  )
+)
+
+grid.text(
+  "BK Advisors", 
+  x = 0.005, 
+  y = 0.005, 
+  just = c("left", "bottom"),
+  gp = gpar(
+    col = GREY,
+    fontsize = 16,
+    fontfamily = "Milo TE W01"
+  )
+)
+
 
 
 ```
