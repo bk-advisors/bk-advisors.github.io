@@ -124,5 +124,89 @@
     "title": "The Road to Better Healthcare Financing in Uganda: Challenges and Opportunities",
     "section": "References",
     "text": "References\n::: {Source: http://apps.who.int/nha/database} :::"
+  },
+  {
+    "objectID": "bar-chart-template.html",
+    "href": "bar-chart-template.html",
+    "title": "Bar chart template",
+    "section": "",
+    "text": "library(grid)\nlibrary(tidyverse)\nlibrary(shadowtext)"
+  },
+  {
+    "objectID": "bar-chart-template.html#overview",
+    "href": "bar-chart-template.html#overview",
+    "title": "Bar chart template",
+    "section": "",
+    "text": "Brief introduction to the topic and why it matters for development finance/management."
+  },
+  {
+    "objectID": "bar-chart-template.html#key-points",
+    "href": "bar-chart-template.html#key-points",
+    "title": "Bar chart template",
+    "section": "Key Points",
+    "text": "Key Points\n\nFirst Main Point\nYour content here…\n\n\nData Analysis"
+  },
+  {
+    "objectID": "bar-chart-template.html#recommendations",
+    "href": "bar-chart-template.html#recommendations",
+    "title": "Bar chart template",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nKey takeaway 1\nKey takeaway 2\nKey takeaway 3"
+  },
+  {
+    "objectID": "bar-chart-template.html#references",
+    "href": "bar-chart-template.html#references",
+    "title": "Bar chart template",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "bar-chart-template.html#original-dataset-were-trying-to-recreate",
+    "href": "bar-chart-template.html#original-dataset-were-trying-to-recreate",
+    "title": "Bar chart template",
+    "section": "Original dataset we’re trying to recreate",
+    "text": "Original dataset we’re trying to recreate\n\n\n\nOriginal"
+  },
+  {
+    "objectID": "bar-chart-template.html#create-dataset",
+    "href": "bar-chart-template.html#create-dataset",
+    "title": "Bar chart template",
+    "section": "Create dataset",
+    "text": "Create dataset\n\nnames &lt;- c(\n    \"Hantavirus\", \"Tularemia\", \"Dengue\", \"Ebola\", \"E. coli\", \n    \"Tuberculosis\", \"Salmonella\", \"Vaccinia\", \"Brucella\"\n  )\n  \n# Name is an ordered factor. We do this to ensure the bars are sorted.\ndata &lt;- data.frame(\n  count = c(6, 7, 7, 9, 11, 15, 17, 18, 54), \n  name = factor(names, levels = names),\n  y = seq(length(names)) * 0.9\n)\n\n# Let's also define the colors\nBLUE &lt;- \"#076fa2\"\nRED &lt;- \"#E3120B\"\nBLACK &lt;- \"#202020\"\nGREY &lt;- \"grey50\""
+  },
+  {
+    "objectID": "bar-chart-template.html#basic-bar-chart",
+    "href": "bar-chart-template.html#basic-bar-chart",
+    "title": "Bar chart template",
+    "section": "Basic Bar Chart",
+    "text": "Basic Bar Chart\n\nplt &lt;- ggplot(data) +\n  geom_col(aes(count, name), fill = BLUE, width = 0.6) \n\nplt\n\n\n\n\nBasic Bar Chart"
+  },
+  {
+    "objectID": "bar-chart-template.html#original-chart-were-trying-to-recreate",
+    "href": "bar-chart-template.html#original-chart-were-trying-to-recreate",
+    "title": "Bar chart template",
+    "section": "Original chart we’re trying to recreate",
+    "text": "Original chart we’re trying to recreate\n\n\n\nOriginal"
+  },
+  {
+    "objectID": "bar-chart-template.html#load-packages",
+    "href": "bar-chart-template.html#load-packages",
+    "title": "Bar chart template",
+    "section": "",
+    "text": "library(grid)\nlibrary(tidyverse)\nlibrary(shadowtext)"
+  },
+  {
+    "objectID": "bar-chart-template.html#customized-layout",
+    "href": "bar-chart-template.html#customized-layout",
+    "title": "Bar chart template",
+    "section": "Customized layout",
+    "text": "Customized layout\n\n# Working on the x and y scales + adjusting the axes\n\nplt2 &lt;- plt + \n  scale_x_continuous(\n    limits = c(0, 55.5),\n    breaks = seq(0, 55, by = 5), \n    expand = c(0, 0), # The horizontal axis does not extend to either side\n    position = \"top\"  # Labels are located on the top\n  ) +\n  \n  # The vertical axis only extends upwards \n  scale_y_discrete(expand = expansion(add = c(0, 0.5))) +\n  theme(\n    \n    # Set background color to white\n    panel.background = element_rect(fill = \"white\"),\n    \n    # Set the color and the width of the grid lines for the horizontal axis\n    panel.grid.major.x = element_line(color = \"#A8BAC4\", size = 0.3),\n    \n    # Remove tick marks by setting their length to 0\n    axis.ticks.length = unit(0, \"mm\"),\n    \n    # Remove the title for both axes\n    axis.title = element_blank(),\n    \n    # Only left line of the vertical axis is painted in black\n    axis.line.y.left = element_line(color = \"black\"),\n    \n    # Remove labels from the vertical axis\n    axis.text.y = element_blank(),\n    \n    # But customize labels for the horizontal axis\n    axis.text.x = element_text(family = \"Econ Sans Cnd\", size = 16)\n  )\n\nplt2\n\n\n\n\nBasic Bar Chart"
+  },
+  {
+    "objectID": "bar-chart-template.html#customized-bar-chart---v2-layout",
+    "href": "bar-chart-template.html#customized-bar-chart---v2-layout",
+    "title": "Bar chart template",
+    "section": "Customized Bar chart - v2 layout",
+    "text": "Customized Bar chart - v2 layout\n\n# Working on the x and y scales + adjusting the axes\n\nplt2 &lt;- plt + \n  scale_x_continuous(\n    limits = c(0, 55.5),\n    breaks = seq(0, 55, by = 5), \n    expand = c(0, 0), # The horizontal axis does not extend to either side\n    position = \"top\"  # Labels are located on the top\n  ) +\n  \n  # The vertical axis only extends upwards \n  scale_y_discrete(expand = expansion(add = c(0, 0.5))) +\n  theme(\n    \n    # Set background color to white\n    panel.background = element_rect(fill = \"white\"),\n    \n    # Set the color and the width of the grid lines for the horizontal axis\n    panel.grid.major.x = element_line(color = \"#A8BAC4\", size = 0.3),\n    \n    # Remove tick marks by setting their length to 0\n    axis.ticks.length = unit(0, \"mm\"),\n    \n    # Remove the title for both axes\n    axis.title = element_blank(),\n    \n    # Only left line of the vertical axis is painted in black\n    axis.line.y.left = element_line(color = \"black\"),\n    \n    # Remove labels from the vertical axis\n    axis.text.y = element_blank(),\n    \n    # But customize labels for the horizontal axis\n    axis.text.x = element_text(family = \"Econ Sans Cnd\", size = 16)\n  )\n\nplt2\n\n\n\n\nBar Chart - v2"
   }
 ]

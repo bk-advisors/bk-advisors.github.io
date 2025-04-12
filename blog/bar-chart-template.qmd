@@ -1,57 +1,135 @@
 ---
-title: "Blog Post Title"
-author: "Author Name"
-date: "2025-03-17"
-categories: [Financial Management, Data Analysis]
-image: "./assets/grants-mgt.jpg"
-description: "A brief description of your blog post (appears in preview cards)"
+title: "Bar chart template"
+author: "Matthew Kuch"
+date: "2025-04-12"
+categories: [Data Visualization, Data Analysis]
+image: "./assets/original_economist_bar.png"
+description: "A nice looking Economist-esque bar chart "
 format: 
   html:
     toc: true
     toc-depth: 3
     toc-title: "Contents"
-    code-fold: false
+    code-fold: true
     code-tools: false
-    code-copy: false
-    echo: false
+    code-copy: true
+    echo: true
 ---
 
-## Overview
-
-Brief introduction to the topic and why it matters for development finance/management.
-
-## Key Points
-
-### First Main Point
-
-Your content here...
+## Load packages
 
 ```{r}
 #| label: setup
-#| include: false
+#| include: true
+#| warning: false
+#| error: false
 
+library(grid)
 library(tidyverse)
-library(knitr)
-# Add other required packages
+library(shadowtext)
+
 ```
 
-### Data Analysis
+## Original chart we're trying to recreate
+
+![Original](./assets/original_economist_bar.png)
+
+
+## Create dataset
+```{r}
+#| include: true
+#| warning: false
+#| error: false
+
+
+names <- c(
+    "Hantavirus", "Tularemia", "Dengue", "Ebola", "E. coli", 
+    "Tuberculosis", "Salmonella", "Vaccinia", "Brucella"
+  )
+  
+# Name is an ordered factor. We do this to ensure the bars are sorted.
+data <- data.frame(
+  count = c(6, 7, 7, 9, 11, 15, 17, 18, 54), 
+  name = factor(names, levels = names),
+  y = seq(length(names)) * 0.9
+)
+
+# Let's also define the colors
+BLUE <- "#076fa2"
+RED <- "#E3120B"
+BLACK <- "#202020"
+GREY <- "grey50"
+
+
+```
+
+
+## Basic Bar Chart
 
 ```{r}
-#| label: data-analysis
+#| label: data-viz-v1
+#| include: true
 #| warning: false
-#| fig-cap: "Figure Description"
+#| error: false
+#| fig-cap: "Basic Bar Chart"
 
-# Your R code here
-# Example visualization
+plt <- ggplot(data) +
+  geom_col(aes(count, name), fill = BLUE, width = 0.6) 
+
+plt
 
 ```
 
-## Recommendations
+## Customized Bar chart - v2 layout
+```{r}
+#| label: data-viz-v2
+#| include: true
+#| warning: false
+#| error: false
+#| fig-cap: "Bar Chart - v2"
 
-- Key takeaway 1
-- Key takeaway 2
-- Key takeaway 3
+# Working on the x and y scales + adjusting the axes
+
+plt2 <- plt + 
+  scale_x_continuous(
+    limits = c(0, 55.5),
+    breaks = seq(0, 55, by = 5), 
+    expand = c(0, 0), # The horizontal axis does not extend to either side
+    position = "top"  # Labels are located on the top
+  ) +
+  
+  # The vertical axis only extends upwards 
+  scale_y_discrete(expand = expansion(add = c(0, 0.5))) +
+  theme(
+    
+    # Set background color to white
+    panel.background = element_rect(fill = "white"),
+    
+    # Set the color and the width of the grid lines for the horizontal axis
+    panel.grid.major.x = element_line(color = "#A8BAC4", size = 0.3),
+    
+    # Remove tick marks by setting their length to 0
+    axis.ticks.length = unit(0, "mm"),
+    
+    # Remove the title for both axes
+    axis.title = element_blank(),
+    
+    # Only left line of the vertical axis is painted in black
+    axis.line.y.left = element_line(color = "black"),
+    
+    # Remove labels from the vertical axis
+    axis.text.y = element_blank(),
+    
+    # But customize labels for the horizontal axis
+    axis.text.x = element_text(family = "Econ Sans Cnd", size = 16)
+  )
+
+plt2
+
+
+
+```
+
 
 ## References
 
