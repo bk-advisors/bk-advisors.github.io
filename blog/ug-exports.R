@@ -67,6 +67,8 @@ ggplot(country_breakdown, aes(x = reorder(Country, Exports), y = Exports)) +
        x = "") +
   theme_economist()
 
+#write.csv(country_breakdown, file="./data/ug-exports-2024.csv", row.names = FALSE)
+
 # 3. Country-specific trends
 ggplot(eac_annual, aes(x = Year, y = Exports, color = Country)) +
   geom_line(linewidth = 1) +
