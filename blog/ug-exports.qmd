@@ -1,0 +1,39 @@
+---
+title: "Securing the National Economic Interest"
+author: "Matthew Kuch"
+date: "2025-04-13"
+categories: [Data Visualization, Data Analysis]
+image: "./assets/original_economist_bar.png"
+description: "Why Uganda's military was deployed to South Sudan "
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    code-fold: true
+    code-tools: false
+    code-copy: true
+    echo: true
+---
+
+## Load packages
+
+```{r}
+#| label: setup
+#| include: true
+#| warning: false
+#| error: false
+
+library(grid)
+library(tidyverse)
+library(shadowtext)
+
+```
+
+
+
+
+## References
+
+::: {#refs}
+:::
