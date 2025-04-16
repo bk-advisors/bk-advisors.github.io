@@ -40,7 +40,7 @@ Which begs the question: Secure what, exactly?
 
 In geopolitics, you rarely send elite troops somewhere just to *be* there and chill. You send them because something valuable might slip away. And in East Africa, few things are more valuable than a reliable trading partner.
 
-South Sudan is fragile state. Always has been, since its independence. But it’s also Uganda’s **second-largest export market in the East African region**, an economic fact that matters alot. ![Exports to EAC Member States in 2024](ug-exports.png)
+South Sudan is fragile state. Always has been, since its independence. But it’s also Uganda’s **second-largest export market in the East African region**, an economic fact that matters alot. ![Exports to EAC Member States in 2024](assets/barchart-v2.png)
 
 Uganda exports to South Sudan the kinds of things that a young country needs to grow: building materials, household goods, processed food, medicine. That trade isn’t just business for Uganda, it’s an economic lifeblood for thousands of Ugandan businesses and jobs.
 

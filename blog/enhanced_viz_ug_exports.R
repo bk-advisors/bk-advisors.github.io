@@ -70,6 +70,8 @@ main_plot <- ggplot(df, aes(x = Exports, y = Country)) +
     axis.text.y = element_text(hjust = 1, margin = margin(r = 5))
   )
 
+main_plot
+
 # Create a minimalist container - just enough context, no decorative elements
 # Remove unnecessary elements like the heavy border line
 
@@ -92,6 +94,8 @@ final_plot <- ggdraw() +
   
   # Minimal source attribution
   draw_label(caption_text, size = 8, color = "gray40", x = 0.03, y = 0.02, hjust = 0)
+
+final_plot
 
 # Display the plot
 print(final_plot)
