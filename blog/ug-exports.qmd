@@ -1,10 +1,10 @@
 ---
-title: "Securing the National Economic Interest"
+title: "Uganda's Key Trading Partners in the Region"
 author: "Matthew Kuch"
 date: "2025-04-13"
-categories: [Data Visualization, Data Analysis]
+categories: [Strategy, Trade]
 image: "./assets/original_economist_bar.png"
-description: "Why Uganda's military was deployed to South Sudan "
+description: "A short story about securing the national interest?"
 format: 
   html:
     toc: true
@@ -51,8 +51,6 @@ There’s a iron-rule that applies across countries, businesses, and families:
 In the days and weeks leading up to the deployment, reports trickled in of political infighting in Juba, between the President Salva Kiir and his Vice President, Reich Machar, with hints that the fragile peace might not hold. If that happens, the Nimule-Juba corridor, Uganda’s commercial artery in the West-Nile region, gets severed.
 
 So, the UPDF moved. Not just to keep peace. Not just to look strong. But to keep the trucks moving and the contracts alive.
-
-History tells us wars are often fought over ideals, but soldiers are more often sent where money is made. You don’t always need to follow the money - but if you don’t, you risk missing the point.
 
 ## References
 
