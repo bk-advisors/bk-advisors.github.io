@@ -1,0 +1,15 @@
+{
+  "hash": "b59a330da764c875cb015e54c8d39e2f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Securing the National Economic Interest\"\nauthor: \"Matthew Kuch\"\ndate: \"2025-04-13\"\ncategories: [Data Visualization, Data Analysis]\nimage: \"./assets/original_economist_bar.png\"\ndescription: \"Why Uganda's military was deployed to South Sudan \"\nformat: \n  html:\n    toc: true\n    toc-depth: 3\n    toc-title: \"Contents\"\n    code-fold: false\n    code-tools: false\n    code-copy: true\n    echo: false\n---\n\n::: {.cell}\n\n:::\n\n\n\nOn March 9, 2025, Uganda quietly deployed troops to Juba, the capital of South Sudan. No big press release. No formal announcement. Just soldiers and a military convoy crossing a border under a sky that looked the same as it always has.\n\nTwo days later, Muhoozi Kainerugaba, Uganda’s top military officer, broke the silence on X (formerly Twitter):\n\n![CDF Post](assets/MK_South_Sudan_Post.jpg)\n\nNo further context. Just that one key word -*\"secure\".*\n\nWhich begs the question: Secure what, exactly?\n\nIn geopolitics, you rarely send elite troops somewhere just to *be* there and chill. You send them because something valuable might slip away. And in East Africa, few things are more valuable than a reliable trading partner.\n\nSouth Sudan is fragile state. Always has been, since its independence. But it’s also Uganda’s **second-largest export market in the East African region**, an economic fact that matters alot. ![Exports to EAC Member States in 2024](ug-exports.png)\n\nUganda exports to South Sudan the kinds of things that a young country needs to grow: building materials, household goods, processed food, medicine. That trade isn’t just business for Uganda, it’s an economic lifeblood for thousands of Ugandan businesses and jobs.\n\nThere’s a iron-rule that applies across countries, businesses, and families:\n\n**You protect what you depend on,** and Uganda depends on South Sudan being stable - for economic, social and political reasons.\n\nIn the days and weeks leading up to the deployment, reports trickled in of political infighting in Juba, between the President Salva Kiir and his Vice President, Reich Machar, with hints that the fragile peace might not hold. If that happens, the Nimule-Juba corridor, Uganda’s commercial artery in the West-Nile region, gets severed.\n\nSo, the UPDF moved. Not just to keep peace. Not just to look strong. But to keep the trucks moving and the contracts alive.\n\nHistory tells us wars are often fought over ideals, but soldiers are more often sent where money is made. You don’t always need to follow the money - but if you don’t, you risk missing the point.\n\n## References\n\n1.  https://www.bou.or.ug/bouwebsite/Statistics/index.html\n2.  https://x.com/mkainerugaba/status/1899204699208724671\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
