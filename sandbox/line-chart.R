@@ -245,7 +245,7 @@ p1 <- p1 +
 # Add title
 p1 <- p1 +
   labs(
-    title = "**East African Countries,** % share of Uganda's Exports to the Region, 2014 - 2024",
+    title = "**East African Countries,** % Share of Uganda's Exports to the Region, 2014 - 2024",
   ) + 
   theme(
     # theme_markdown() is provided by ggtext and means the title contains 
@@ -260,4 +260,48 @@ p1
 
 # Chart 2 - The Stacked Area Chart
 
+p2 <- ggplot(export_shares) +
+  # color = "white" indicates the color of the lines between the areas
+  geom_area(aes(Year, Exports, fill = Country), color = "white") +
+  scale_fill_manual(values = c(GREY_DARKER, GREY, BLUE, GREEN, BROWN, BROWN_DARKER)) +
+  theme(legend.position = "None") # no legend
 
+p2
+
+# Customize the layout
+
+p2 <- p2 + 
+  scale_x_continuous(
+    # Note: Data goes from 2014 to 2024. Extra space is added on the right
+    # so there's room for the grid line labels ;)
+    limits = c(2013.5, 2024.5),
+    expand = c(0, 0), # The horizontal axis does not extend to either side
+    breaks = c(2014,2016,2018,2020,2022,2024),  # Set custom break locations
+    labels = c("2014", "16", "18", "20","22","24") # And custom labels on those breaks!
+  ) +
+  scale_y_continuous(
+    limits = c(0, 2250),
+    breaks = seq(0, 2250, by = 500), 
+    expand = c(0, 0)
+  ) + 
+  theme(
+    # Set background color to white
+    panel.background = element_rect(fill = "white"),
+    # Remove all grid lines
+    panel.grid = element_blank(),
+    # But add grid lines for the vertical axis, customizing color and size 
+    panel.grid.major.y = element_line(color = "#A8BAC4", size = 0.3),
+    # Remove tick marks by setting their length to 0
+    axis.ticks.length.y = unit(0, "mm"), 
+    axis.ticks.length.x = unit(2, "mm"),
+    # Remove the title for both axes
+    axis.title = element_blank(),
+    # Only bottom line of the vertical axis is painted in black
+    axis.line.x.bottom = element_line(color = "black"),
+    # Remove labels from the vertical axis
+    axis.text.y = element_blank(),
+    # But customize labels for the horizontal axis
+    axis.text.x = element_text(family = my_font, size = 16)
+  )
+
+p2
