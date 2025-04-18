@@ -3,12 +3,11 @@ project:
   output-dir: posts
 
 website:
-  title: "BK Advisors Blog"
   navbar:
     background: light
     search: true
     left:
-      - text: "Home"
+      - text: "BK Advisors Blog"
         href: https://bk-advisors.github.io/
     right:
       - icon: github

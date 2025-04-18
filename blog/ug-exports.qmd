@@ -2,7 +2,7 @@
 title: "Uganda's Key Trading Partners in the Region"
 author: "Matthew Kuch"
 date: "2025-04-13"
-categories: [Strategy, Trade]
+categories: [Supply Chain Management, Trade]
 image: "./assets/original_economist_bar.png"
 description: "A short story about securing the national interest?"
 format: 
