@@ -46,6 +46,7 @@ eac_annual <- df_annual_clean %>%
   filter(Year >= 2014)
 
 # write.csv(eac_annual, file = "./data/ug-eac-exports.csv", row.names = FALSE)
+# eac_annual <- read.csv("./data/ug-eac-exports.csv")
 
 # Exploratory Data Analysis with Deepseek ----------------------------------
 
@@ -82,6 +83,40 @@ share_table <- export_shares %>%
 
 print(share_table)
 
+# Line Chart with Labels at the end
+
+# Create line chart with labels
+ggplot(export_shares, aes(x = Year, y = Share, color = Country)) +
+  geom_line(linewidth = 1) +
+  # Add shadow text labels at the end of lines (2024)
+  shadowtext::geom_shadowtext(
+    data = export_shares %>% filter(Year == 2024),
+    aes(label = Country, x = Year + 0.2),  # Small offset for label position
+    hjust = 0,  # Left-align text
+    bg.color = "white",  # Background halo color
+    color = "black",     # Text color
+    size = 3.5,
+    show.legend = FALSE
+  ) +
+  scale_x_continuous(
+    breaks = seq(2014, 2024, 1),
+    limits = c(2014, 2026.5)  # Extend x-axis for labels
+  ) +
+  scale_y_continuous(labels = percent_format(scale = 1)) +
+  scale_color_brewer(palette = "Set2") +
+  labs(
+    title = "Uganda's Export Share to EAC Countries (2014-2024)",
+    subtitle = "Line labels show country positions in 2024",
+    y = "Percentage Share",
+    x = "Year"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "none",  # Remove legend since we have direct labels
+    panel.grid.major = element_line(linewidth = 0.25)
+  )
+
 # Stacked Area Chart
 
 # Create stacked area chart
@@ -114,11 +149,18 @@ GREY <- "#C7C9CB"
 GREY_DARKER <- "#5C5B5D"
 RED <- "#E3120B"
 
+# Define Font
+
+my_font <- "Roboto Slab"
+
+font_add_google(name = my_font, family = my_font)
+
+showtext_auto()
+
+
 
 # Chart 1 - The Line Chart
 
-# Aesthetics defined in the `ggplot()` call are reused in the 
-# `geom_line()` and `geom_point()` function calls.
 
 p1 <- ggplot(export_shares, aes(Year, Share)) +
   geom_line(aes(color = Country), size = 2.4) +
@@ -137,6 +179,85 @@ p1 <- ggplot(export_shares, aes(Year, Share)) +
 
 p1
 
-# Chart 2
+# Customize Chart 1 layout
+p1 <- p1 + 
+  scale_x_continuous(
+    limits = c(2013.5, 2024.5),
+    expand = c(0, 0), # The horizontal axis does not extend to either side
+    breaks = c(2014,2016,2018,2020,2022,2024),  # Set custom break locations
+    labels = c("2014", "16", "18", "20","22","24") # And custom labels on those breaks!
+  ) +
+  scale_y_continuous(
+    limits = c(0, 45),
+    breaks = seq(0, 30, by = 5), 
+    expand = c(0, 0)
+  ) + 
+  theme(
+    # Set background color to white
+    panel.background = element_rect(fill = "white"),
+    # Remove all grid lines
+    panel.grid = element_blank(),
+    # But add grid lines for the vertical axis, customizing color and size 
+    panel.grid.major.y = element_line(color = "#A8BAC4", linewidth = 0.3),
+    # Remove tick marks on the vertical axis by setting their length to 0
+    axis.ticks.length.y = unit(0, "mm"), 
+    # But keep tick marks on horizontal axis
+    axis.ticks.length.x = unit(2, "mm"),
+    # Remove the title for both axes
+    axis.title = element_blank(),
+    # Only the bottom line of the vertical axis is painted in black
+    axis.line.x.bottom = element_line(color = "black"),
+    # Remove labels from the vertical axis
+    axis.text.y = element_blank(),
+    # But customize labels for the horizontal axis
+    axis.text.x = element_text(family = my_font, size = 16)
+  )
+
+p1
+
+# Add annotations and title
+
+# Add labels for the lines
+p1 <- p1 +
+  geom_shadowtext(
+    data = export_shares %>% filter(Year == 2014),
+    aes(label = Country, x = Year + 0.2),  # Small offset for label position
+    hjust = 0,  # Left-align text
+    bg.color = "white",  # Background halo color
+    color = "black",     # Text color
+    family = my_font,
+    size = 6,
+    show.legend = FALSE
+  )
+
+# Add labels for the horizontal lines
+p1 <- p1 + 
+  geom_text(
+    data = data.frame(x = 2024.5, y = seq(0, 45, by = 5)),
+    aes(x, y, label = y),
+    hjust = 1, # Align to the right
+    vjust = 0, # Align to the bottom
+    nudge_y = 45 * 0.01, # The pad is equal to 1% of the vertical range (32 - 0)
+    family = my_font,
+    size = 6
+  )
+
+# Add title
+p1 <- p1 +
+  labs(
+    title = "**East African Countries,** % share of Uganda's Exports to the Region, 2014 - 2024",
+  ) + 
+  theme(
+    # theme_markdown() is provided by ggtext and means the title contains 
+    # Markdown that should be parsed as such (the '**' symbols)
+    plot.title = element_markdown(
+      family = my_font, 
+      size = 18
+    )
+  )
+
+p1
+
+# Chart 2 - The Stacked Area Chart
 
 
