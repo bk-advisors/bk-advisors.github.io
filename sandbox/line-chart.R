@@ -46,7 +46,7 @@ eac_annual <- df_annual_clean %>%
   filter(Year >= 2014)
 
 # write.csv(eac_annual, file = "./data/ug-eac-exports.csv", row.names = FALSE)
-# eac_annual <- read.csv("./data/ug-eac-exports.csv")
+eac_annual <- read.csv("./data/ug-eac-exports.csv")
 
 # Exploratory Data Analysis with Deepseek ----------------------------------
 
@@ -119,7 +119,7 @@ ggplot(export_shares, aes(x = Year, y = Share, color = Country)) +
 
 # Stacked Area Chart
 
-# Create stacked area chart
+# Create stacked area chart - without labels
 ggplot(export_shares, aes(x = Year, y = Exports, fill = Country)) +
   geom_area(color = "white", linewidth = 0.3, alpha = 0.8) +
   scale_x_continuous(breaks = seq(2014, 2024, 1)) +
@@ -135,6 +135,61 @@ ggplot(export_shares, aes(x = Year, y = Exports, fill = Country)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         panel.grid.major.x = element_blank(),
         legend.position = "bottom")
+
+# Stacked area chart - with labels and viridis color scale
+
+
+# Calculate optimal label positions
+labeled_data <- export_shares %>%
+  mutate(Country = fct_reorder(Country, Exports, sum, .desc = TRUE)) %>%
+  group_by(Country) %>%
+  # Find year with maximum export value for each country
+  mutate(peak_year = Year[which.max(Exports)]) %>%
+  group_by(Year) %>%
+  arrange(desc(Country)) %>% # Match stacking order
+  mutate(
+    ymin = lag(cumsum(Exports), default = 0),
+    ymax = cumsum(Exports),
+    mid_y = (ymin + ymax)/2
+  ) %>%
+  ungroup()
+
+# Create area chart with internal labels
+ggplot(labeled_data, aes(x = Year, y = Exports, fill = Country)) +
+  geom_area(color = "white", linewidth = 0.3, position = "stack") +
+  # Add labels at peak years
+  geom_shadowtext(
+    data = . %>% filter(Year == peak_year),
+    aes(x = Year, y = mid_y, label = Country),
+    color = "white",
+    bg.color = "black",
+    size = 3.5,
+    fontface = "bold",
+    vjust = 0.5,
+    show.legend = FALSE
+  ) +
+  scale_x_continuous(
+    breaks = seq(2014, 2024, 1),
+    expand = c(0, 0),
+    limits = c(2014, 2026.5)  # Extend x-axis for labels
+  ) +
+  scale_y_continuous(
+    labels = dollar_format(prefix = "$", suffix = "M"),
+    expand = c(0, 0)
+  ) +
+  scale_fill_viridis_d(option = "mako", begin = 0.2, end = 0.8) +
+  labs(
+    title = "Uganda's EAC Exports with In-Stream Labels",
+    subtitle = "Country names placed at their respective peak export years",
+    y = "Export Value (US$ Millions)",
+    x = NULL
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, margin = margin(t = 5)),
+    panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  )
 
 
 
@@ -245,7 +300,7 @@ p1 <- p1 +
 # Add title
 p1 <- p1 +
   labs(
-    title = "**East African Countries,** % Share of Uganda's Exports to the Region, 2014 - 2024",
+    title = "**EAC,** % Share of Uganda's Exports to the Region, 2014 - 2024",
   ) + 
   theme(
     # theme_markdown() is provided by ggtext and means the title contains 
@@ -260,7 +315,23 @@ p1
 
 # Chart 2 - The Stacked Area Chart
 
-p2 <- ggplot(export_shares) +
+# Calculate optimal label positions
+exports_labeled <- export_shares %>%
+  mutate(Country = fct_reorder(Country, Exports, sum, .desc = TRUE)) %>%
+  group_by(Country) %>%
+  # Find year with maximum export value for each country
+  mutate(peak_year = Year[which.max(Exports)]) %>%
+  group_by(Year) %>%
+  arrange(desc(Country)) %>% # Match stacking order
+  mutate(
+    ymin = lag(cumsum(Exports), default = 0),
+    ymax = cumsum(Exports),
+    mid_y = (ymin + ymax)/2
+  ) %>%
+  ungroup()
+
+
+p2 <- ggplot(exports_labeled) +
   # color = "white" indicates the color of the lines between the areas
   geom_area(aes(Year, Exports, fill = Country), color = "white") +
   scale_fill_manual(values = c(GREY_DARKER, GREY, BLUE, GREEN, BROWN, BROWN_DARKER)) +
@@ -281,6 +352,7 @@ p2 <- p2 +
   ) +
   scale_y_continuous(
     limits = c(0, 2250),
+    labels = dollar_format(prefix = "$", suffix = "M"),
     breaks = seq(0, 2250, by = 500), 
     expand = c(0, 0)
   ) + 
@@ -290,7 +362,7 @@ p2 <- p2 +
     # Remove all grid lines
     panel.grid = element_blank(),
     # But add grid lines for the vertical axis, customizing color and size 
-    panel.grid.major.y = element_line(color = "#A8BAC4", size = 0.3),
+    panel.grid.major.y = element_line(color = "#A8BAC4", linewidth = 0.3),
     # Remove tick marks by setting their length to 0
     axis.ticks.length.y = unit(0, "mm"), 
     axis.ticks.length.x = unit(2, "mm"),
@@ -305,3 +377,61 @@ p2 <- p2 +
   )
 
 p2
+
+# Adding annotations and labels
+
+# Add labels to the area streams
+p2 <- p2 +
+  geom_shadowtext(
+    data = exports_labeled %>% filter(Year == peak_year),
+    aes(x = Year, y = mid_y, label = Country),
+    color = "white",
+    bg.color = "black",
+    size = 6,
+    family = my_font,
+    fontface = "bold",
+    vjust = 0.5,
+    show.legend = FALSE
+  )
+
+p2
+
+# Add labels for the horizontal lines
+
+p2 <- p2 +
+  geom_text(
+    data = data.frame(x = 2024.5, y = seq(0, 2250, by = 500)),
+    aes(x, y, label = y),
+    hjust = 1,
+    vjust = 0,
+    nudge_y = 2250 * 0.01, # Again, the pad is equal to 1% of the vertical range.
+    family = my_font,
+    size = 6,
+    inherit.aes = FALSE
+  )
+
+p2
+
+# Add title
+
+# Note again we use `element_markdown()` to render Markdown content
+p2 <- p2 + 
+  labs(
+    title = "**Exports Value,** US$ Millions",
+  ) + 
+  theme(
+    plot.title = element_markdown(
+      family = my_font, 
+      size = 18
+    )
+  )
+
+p2
+
+# Combining the Charts
+
+p1 <- p1 + theme(plot.margin = margin(0, 0.05, 0, 0, "npc"))
+p2 <- p2 + theme(plot.margin = margin(0, 0, 0.05, 0, "npc"))
+p <- p1 | p2
+
+p
