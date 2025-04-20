@@ -1,10 +1,10 @@
 ---
-title: "Uganda's Key Trading Partners in the Region"
+title: "Trade Under Guard"
 author: "Matthew Kuch"
 date: "2025-04-13"
 categories: [Supply Chain Management, Trade]
 image: "./assets/original_economist_bar.png"
-description: "A short story about securing the national interest?"
+description: "A short story about securing the national interest"
 format: 
   html:
     toc: true
@@ -48,7 +48,7 @@ Uganda exports to South Sudan the kinds of things that a young country needs to 
 
 There’s a iron-rule that applies across countries, businesses, and families:
 
-**You protect what you depend on,** and Uganda depends on South Sudan being stable - for economic, social and political reasons.
+**You protect what you benefit from,** and Uganda benefits (economically, socially and politically) from South Sudan being stable.
 
 In the days and weeks leading up to the deployment, reports trickled in of political infighting in Juba, between the President Salva Kiir and his Vice President, Reich Machar, with hints that the fragile peace might not hold. If that happens, the Nimule-Juba corridor, Uganda’s commercial artery in the West-Nile region, gets severed.
 
