@@ -12,6 +12,10 @@ website:
     right:
       - icon: github
         href: https://github.com/bk-advisors
+        
+include-in-header:
+  - text: |
+     <link rel = "shortcut icon" href = "./assets/bka_simple.png" />
 
 format:
   html:
