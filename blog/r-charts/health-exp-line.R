@@ -4,7 +4,7 @@ library(highcharter)
 library(readxl)
 
 # BK Advisors color palette
-bk_colors <- c(
+bk_colors <- list(  # Define as list instead of vector
   deepBlue = "#0A4C7F",
   mediumBlue = "#1976D2",
   lightBlue = "#64B5F6",
@@ -27,7 +27,7 @@ plot_govt_exp <- hchart(eac_govt_health_exp,
        hcaes(x = Year, 
              y = Govt_Health_Exp, 
              group = location)) %>%
-  hc_colors(unname(bk_colors)[1:5]) %>% # Use first 5 brand colors
+  hc_colors(as.list(unname(bk_colors))[1:5]) %>% # Changed to as.list(unname())
   hc_title(text = "Government Health Expenditure per Capita Trend in East Africa (2012-2022)",
            style = list(fontWeight = "bold", 
                         fontSize = "20px",

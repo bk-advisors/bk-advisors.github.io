@@ -1,10 +1,10 @@
-
+# Load required packages
 library(tidyverse)
-library(highcharter)
 library(readxl)
+library(highcharter)
 
 # BK Advisors color palette
-bk_colors <- c(
+bk_colors <- list(  # Define as list instead of vector
   deepBlue = "#0A4C7F",
   mediumBlue = "#1976D2",
   lightBlue = "#64B5F6",
@@ -14,27 +14,35 @@ bk_colors <- c(
   lightGray = "#ECEFF1"
 )
 
-# Define East African countries (verify names match WHO data)
-east_africa <- c("Burundi", "Kenya", "Rwanda", "Uganda", "United Republic of Tanzania","South Sudan","Democratic Republic of the Congo")
+# Define East African countries
+east_africa <- c("Burundi", "Kenya", "Rwanda", "Uganda", "Tanzania")
 
-# Read csv file
+# Read and clean data
+health_exp <- read_excel("./data/who_health_exp_per_capita.xls", sheet = "Data", skip = 3) %>%
+  filter(`Country Name` %in% east_africa) %>%
+  select(`Country Name`, `2012`:`2022`) %>%
+  pivot_longer(cols = -`Country Name`, 
+               names_to = "Year", 
+               values_to = "Expenditure") %>%
+  mutate(Year = as.numeric(Year),
+         Expenditure = round(as.numeric(Expenditure), 2),
+         `Country Name` = factor(`Country Name`, levels = east_africa)) %>%
+  arrange(`Country Name`, Year)
 
-eac_govt_health_exp <- read.csv("./data/eac-govt-health-exp.csv")
-
-# Visualization thats compliant with color palette
-plot_govt_exp <- hchart(eac_govt_health_exp, 
+# Create interactive visualization with brand colors
+hchart(health_exp, 
        type = "line",
        hcaes(x = Year, 
-             y = Govt_Health_Exp, 
-             group = location)) %>%
-  hc_colors(unname(bk_colors)[1:5]) %>% # Use first 5 brand colors
-  hc_title(text = "Government Health Expenditure per Capita Trend in East Africa (2012-2022)",
+             y = Expenditure, 
+             group = `Country Name`)) %>%
+  hc_colors(as.list(unname(bk_colors))[1:5]) %>% # Changed to as.list(unname())
+  hc_title(text = "Health Expenditure per Capita Trend in East Africa (2012-2022)",
            style = list(fontWeight = "bold", 
                         fontSize = "20px",
                         color = bk_colors["darkGray"])) %>%
-  hc_subtitle(text = "Current international $US",
+  hc_subtitle(text = "Current international $, PPP adjusted",
               style = list(color = bk_colors["darkGray"])) %>%
-  hc_yAxis(title = list(text = "Govt. Health Expenditure per Capita ($US)",
+  hc_yAxis(title = list(text = "Health Expenditure per Capita (PPP $)",
                         style = list(color = bk_colors["darkGray"])),
            labels = list(format = "${value}",
                          style = list(color = bk_colors["darkGray"])),
@@ -49,12 +57,13 @@ plot_govt_exp <- hchart(eac_govt_health_exp,
   hc_tooltip(valueDecimals = 2,
              valuePrefix = "$",
              headerFormat = "<span style='color:{point.color}'>\u25CF</span> <b>{series.name}</b><br>",
-             pointFormat = "Year: {point.x}<br>Govt. Health Expenditure: {point.y}",
+             pointFormat = "Year: {point.x}<br>Expenditure: {point.y}",
              backgroundColor = bk_colors["lightGray"]) %>%
-  hc_legend(element_blank) %>%
-  hc_caption(
-    text = "Source: WHO Global Health Expenditure Database",
-    style = list(fontSize = "10px")) %>%
+  hc_legend(align = "right",
+            verticalAlign = "bottom",
+            itemStyle = list(color = bk_colors["darkGray"]),
+            title = list(text = "Country",
+                         style = list(color = bk_colors["darkGray"]))) %>%
   hc_exporting(enabled = TRUE,
                buttons = list(contextButton = list(theme = list(fill = bk_colors["lightGray"])))) %>%
   hc_add_theme(hc_theme_merge(
@@ -65,28 +74,8 @@ plot_govt_exp <- hchart(eac_govt_health_exp,
       legend = list(itemHoverStyle = list(color = bk_colors["mediumBlue"]))
     )
   )) %>%
-  hc_plotOptions(series = list(
-    marker = list(enabled = TRUE,
-                  fillColor = "white",
-                  lineWidth = 2,
-                  lineColor = NULL),
-    dataLabels = list(
-      enabled = TRUE,
-      allowOverlap = FALSE,
-      formatter = JS("function() {
-      if (this.point.x === 2022) {
-        return '<span style=\"color: ' + this.series.color + '\">' + 
-               this.series.name + '</span>';
-      }
-      return '';
-    }"),
-      style = list(color = bk_colors["darkGray"], 
-                   fontSize = "12px",
-                   textOutline = "none"),
-      align = "left",
-      x = 5
-    ),
-    states = list(hover = list(halo = list(size = 10)))
-  ))
-
-plot_govt_exp
+  hc_plotOptions(series = list(marker = list(enabled = TRUE,
+                                             fillColor = "white",
+                                             lineWidth = 2,
+                                             lineColor = NULL),
+                               states = list(hover = list(halo = list(size = 10)))))

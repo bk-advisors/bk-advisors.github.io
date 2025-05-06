@@ -2,7 +2,7 @@
 title: "The Cost of Staying Alive in Uganda"
 author: "Matthew Kuch"
 date: "2023-05-06"
-categories: [Financial Management]
+categories: [Financial Management, Health Financing]
 image: "./assets/grants-mgt.jpg"
 format: 
   html:
@@ -21,20 +21,20 @@ Then came the stroke.
 
 No warning. Just the quiet attack of two deadly enemies many don't see coming - high blood pressure and diabetes. Neither screams or shows up when you expect. However when they arrive, they demand attention you're rarely prepared to give.
 
-My siblings and I raced up from Kampala, terrified but trying not to show it. We got her into a private clinic in Pakwach town. She was stabilized. She came home. The bill was 489,200 shillings. About $130.
+My siblings and I raced up North to Pakwach from Kampala, terrified but trying not to show it. Once we reached, we got her admitted into a private clinic in Pakwach town. She was stabilized, spent the night being monitored, and was discharged the following day, then we took her home. The bill was 489,200 shillings. About $130.
 
 That $130 is now the most important money I’ve ever spent.
 
-But here’s the thing that won’t leave me alone: my mother survived because we had that money. Someone else’s doesn’t—because they didn’t. In Uganda, survival isn’t always about biology. It’s often about cash flow.
+But here’s the thing that won’t leave me alone: my mother survived the worst because we had that money. Many people's mothers don't survive because they simply didn't have the cash to pay for better treatment. This is a common experience in Uganda, where survival is often about how much cash is in your pocket.
 
-And that’s a terrifying way to live.
+That’s a terrifying way to live.
 
 
 ## **When Health Systems Fail Us**
 
-Most people think of healthcare are as a big thing. Infrastructure. Budgets. Ministries. But it’s really a small thing. It’s about whether your mother gets to come home. It’s about whether your neighbor dies quietly because they couldn’t afford their medication.
+Most people think of the healthcare system in terms of Infrastructure, Budget allocations and Medical Personnel.  But its really about whether your mother gets to come home. It’s about whether your neighbor dies quietly because they couldn’t afford their medication. That's the really impact of a failing system.
 
-Between 2012 and 2022, Uganda’s health spending per person fell—from $55 to $44, while this same metric went up for our neighbors in Kenya ($65 to $90) and Rwanda ($57 to $77).
+Between 2012 and 2022, Uganda’s government health spending per person barely changed and has hovered around USD 10 per person, while this same metric went up for our neighbors in Kenya ($21 to $42 per person) and Rwanda ($15 to $27 per person).
 
 
 
@@ -44,29 +44,26 @@ Between 2012 and 2022, Uganda’s health spending per person fell—from $55 to 
 
 ```
 
-That decline doesn’t show up in newspaper headlines, but it shows up in empty drug shelves, exhausted nurses, and families praying the fever breaks because they can’t afford to treat it.
+That stagnation in government health spending doesn’t show up in newspaper headlines, but it shows up in empty drug shelves, exhausted health workers, and mothers praying their child's fever breaks because they can’t afford to treat it. It Uganda, when illness comes, debt usually follows, and if debt doesn't come, death just might...
 
-34% of all healthcare spending here still comes straight from people’s pockets. That hasn’t changed in years. When illness comes, so does debt. And if debt doesn’t come, death might.
-
-In more developed countries, healthcare appears to be a well oiled system. Here, it feels like a gamble. 
+In more advanced economies,seeking healthcare feels like being on a conveyor belt of a well oiled mechanical system, that just works like clock-work. Here, it feels like a gamble, between life and death. 
 
 
 ## **Systems Do Exactly What They’re Designed To Do.**
 
-The human tendency is to assume failure comes from chaos or neglect. But most of the time, systems work the way they were built. If the healthcare system leaves people behind, it’s because that’s how we’ve chosen—passively or otherwise—for it to operate.
+The human tendency is to assume failure comes from chaos or neglect. But most of the time, systems work the way they were built. If the healthcare system leaves people behind, it’s because that’s how we’ve chosen (passively or otherwise) for it to operate.
 
 But here’s the hopeful part: anything built can be rebuilt.
 
 We could:
 
-- **Double down on prevention.** High blood pressure and high sugar don’t need to be death sentences. Screen early. Educate better. These are boring interventions—until they save someone you love.
+- **Double down on prevention.** High blood pressure and diabetes don’t need to be death sentences if we screen ourselves early and improve health education and sensitization. These are boring interventions, until they save someone you love.
 
-- **Align incentives.** Since its people that make decisions about how resources are allocated, and these specific people (political leaders and leaders of industry) will only change if they are incentivized. Simply put, government policy decisions and resource allocations are based more on political and economic incentives than social incentives, hence they three will need to be strategically aligned.
+- **Align incentives.** Since its human beings (specifically leaders) that make decisions about how resources are allocated, and these same leaders (politicians and industrialists) will only change if they are incentivized. We have to accept that government policy decisions and resource allocations are based more on political and economic incentives than social incentives, hence our focus should be on strategically aligning the three.
     
 - **Honor our promises.** We committed to spending 15% of the national budget on health under the Abuja Declaration. We never got close. But money is policy. Where you spend is what you value and prioritize.
 
-    
-- **Learn from Rwanda.** Their national health insurance works. Ours doesn’t exist. Theirs proves it can be done. The only difference is execution.
+- **Learn from Rwanda.** Their national health insurance works. Ours doesn’t exist. Theirs proves it can be done. The only difference is priorities and execution.
     
 
 ## **What We’re Actually Talking About**
@@ -75,11 +72,11 @@ This story isn’t about my mother. It’s not even about health.
 
 It’s about dignity. It’s about whether a nation believes that the poor deserve to live as much as the rich. It’s about the difference between survival and fairness.
 
-No one in Uganda is asking for miracles. They’re asking for the basics. And in many cases, they’re paying for those basics out of pocket—at the exact moment they’re least able to afford them.
+No one in Uganda is asking for miracles. They’re asking for the basics. And in many cases, they’re paying for those basics out of pocket, at the exact moment they’re least able to afford them.
 
 If we wait for a perfect solution, we’ll still be waiting in ten years. But small, clear, immediate action could start rewriting this story tomorrow.
 
-My mother lived because of $130. That number haunts me—not because it was expensive, but because, for too many people, it’s out of reach.
+My mother lived because of $130. That number haunts me - not because it was expensive, but because, for too many people, it’s out of reach.
 
 And in a country like ours, that should never be the reason someone dies.
 

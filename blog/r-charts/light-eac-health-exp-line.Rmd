@@ -1,14 +1,15 @@
 ---
-title: "Exhibit-1 Health Financing in UG"
+title: "Exhibit 1 - EAC Health Spending Per Person"
 output: html_document
 date: "2025-05-06"
 ---
 
 ```{r}
 
+# Load required packages
 library(tidyverse)
-library(highcharter)
 library(readxl)
+library(highcharter)
 
 # BK Advisors color palette
 bk_colors <- list(  # Define as list instead of vector
@@ -31,18 +32,18 @@ eac_govt_health_exp <- read.csv("./data/eac-govt-health-exp.csv")
 eac_govt_health_exp <- eac_govt_health_exp |> 
   select(location,Year,Govt_Health_Exp)
 
-# Visualization thats compliant with color palette
+# Create interactive visualization with brand colors
 hchart(eac_govt_health_exp, 
        type = "line",
        hcaes(x = Year, 
              y = Govt_Health_Exp, 
              group = location)) %>%
   hc_colors(as.list(unname(bk_colors))[1:5]) %>% # Changed to as.list(unname())
-  hc_title(text = "Government Health Expenditure per Capita Trend in East Africa (2012-2022)",
+  hc_title(text = "Govt. Health Expenditure per Capita Trend in East Africa (2012-2022)",
            style = list(fontWeight = "bold", 
                         fontSize = "20px",
                         color = bk_colors["darkGray"])) %>%
-  hc_subtitle(text = "Current international $US",
+  hc_subtitle(text = "Current international US$",
               style = list(color = bk_colors["darkGray"])) %>%
   hc_yAxis(title = list(text = "Govt. Health Expenditure per Capita ($US)",
                         style = list(color = bk_colors["darkGray"])),
@@ -61,10 +62,11 @@ hchart(eac_govt_health_exp,
              headerFormat = "<span style='color:{point.color}'>\u25CF</span> <b>{series.name}</b><br>",
              pointFormat = "Year: {point.x}<br>Govt. Health Expenditure: {point.y}",
              backgroundColor = bk_colors["lightGray"]) %>%
-  hc_legend(element_blank) %>%
-  hc_caption(
-    text = "Source: WHO Global Health Expenditure Database",
-    style = list(fontSize = "10px")) %>%
+  hc_legend(align = "right",
+            verticalAlign = "bottom",
+            itemStyle = list(color = bk_colors["darkGray"]),
+            title = list(text = "Country",
+                         style = list(color = bk_colors["darkGray"]))) %>%
   hc_exporting(enabled = TRUE,
                buttons = list(contextButton = list(theme = list(fill = bk_colors["lightGray"])))) %>%
   hc_add_theme(hc_theme_merge(
@@ -75,30 +77,11 @@ hchart(eac_govt_health_exp,
       legend = list(itemHoverStyle = list(color = bk_colors["mediumBlue"]))
     )
   )) %>%
-  hc_plotOptions(series = list(
-    marker = list(enabled = TRUE,
-                  fillColor = "white",
-                  lineWidth = 2,
-                  lineColor = NULL),
-    dataLabels = list(
-      enabled = TRUE,
-      allowOverlap = FALSE,
-      formatter = JS("function() {
-      if (this.point.x === 2022) {
-        return '<span style=\"color: ' + this.series.color + '\">' + 
-               this.series.name + '</span>';
-      }
-      return '';
-    }"),
-      style = list(color = bk_colors["darkGray"], 
-                   fontSize = "12px",
-                   textOutline = "none"),
-      align = "left",
-      x = 5
-    ),
-    states = list(hover = list(halo = list(size = 10)))
-  ))
-
+  hc_plotOptions(series = list(marker = list(enabled = TRUE,
+                                             fillColor = "white",
+                                             lineWidth = 2,
+                                             lineColor = NULL),
+                               states = list(hover = list(halo = list(size = 10)))))
 
 
 

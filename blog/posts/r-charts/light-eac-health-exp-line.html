@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-05-06">
+
+<title>Exhibit 1 - EAC Health Spending Per Person</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<script src="../site_libs/proj4js-2.3.15/proj4.js"></script>
+
+<link href="../site_libs/highcharts-9.3.1/css/motion.css" rel="stylesheet">
+
+<script src="../site_libs/highcharts-9.3.1/highcharts.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/highcharts-3d.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/highcharts-more.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/stock.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/map.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/data.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/exporting.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/offline-exporting.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/drilldown.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/item-series.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/overlapping-datalabels.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/annotations.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/export-data.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/funnel.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/heatmap.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/treemap.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/sankey.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/dependency-wheel.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/organization.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/solid-gauge.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/streamgraph.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/sunburst.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/vector.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/wordcloud.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/xrange.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/tilemap.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/venn.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/gantt.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/timeline.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/parallel-coordinates.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/bullet.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/coloraxis.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/dumbbell.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/lollipop.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/series-label.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/plugins/motion.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/custom/reset.js"></script>
+
+<script src="../site_libs/highcharts-9.3.1/modules/boost.js"></script>
+
+<script src="../site_libs/highchart-binding-0.9.4/highchart.js"></script>
+
+<link rel="shortcut icon" href="./assets/bka_simple.png">
+
+
+<link rel="stylesheet" href="../blog.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://bk-advisors.github.io/"> 
+<span class="menu-text">BK Advisors Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bk-advisors"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Exhibit 1 - EAC Health Spending Per Person</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 6, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(highcharter)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'highcharter' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+Highcharts (www.highcharts.com) is a Highsoft software product which is
+not free for commercial and Governmental use</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># BK Advisors color palette</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>bk_colors <span class="ot">&lt;-</span> <span class="fu">list</span>(  <span class="co"># Define as list instead of vector</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">deepBlue =</span> <span class="st">"#0A4C7F"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">mediumBlue =</span> <span class="st">"#1976D2"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">lightBlue =</span> <span class="st">"#64B5F6"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">teal =</span> <span class="st">"#00ACC1"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">navy =</span> <span class="st">"#0D47A1"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">darkGray =</span> <span class="st">"#455A64"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">lightGray =</span> <span class="st">"#ECEFF1"</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define East African countries (verify names match WHO data)</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>east_africa <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Burundi"</span>, <span class="st">"Kenya"</span>, <span class="st">"Rwanda"</span>, <span class="st">"Uganda"</span>, <span class="st">"United Republic of Tanzania"</span>,<span class="st">"South Sudan"</span>,<span class="st">"Democratic Republic of the Congo"</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Read csv file</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>eac_govt_health_exp <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/eac-govt-health-exp.csv"</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>eac_govt_health_exp <span class="ot">&lt;-</span> eac_govt_health_exp <span class="sc">|&gt;</span> </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(location,Year,Govt_Health_Exp)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create interactive visualization with brand colors</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="fu">hchart</span>(eac_govt_health_exp, </span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">type =</span> <span class="st">"line"</span>,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>       <span class="fu">hcaes</span>(<span class="at">x =</span> Year, </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> Govt_Health_Exp, </span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>             <span class="at">group =</span> location)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_colors</span>(<span class="fu">as.list</span>(<span class="fu">unname</span>(bk_colors))[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]) <span class="sc">%&gt;%</span> <span class="co"># Changed to as.list(unname())</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_title</span>(<span class="at">text =</span> <span class="st">"Govt. Health Expenditure per Capita Trend in East Africa (2012-2022)"</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>           <span class="at">style =</span> <span class="fu">list</span>(<span class="at">fontWeight =</span> <span class="st">"bold"</span>, </span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>                        <span class="at">fontSize =</span> <span class="st">"20px"</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>])) <span class="sc">%&gt;%</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_subtitle</span>(<span class="at">text =</span> <span class="st">"Current international US$"</span>,</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>              <span class="at">style =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>])) <span class="sc">%&gt;%</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_yAxis</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Govt. Health Expenditure per Capita ($US)"</span>,</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>                        <span class="at">style =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>])),</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>           <span class="at">labels =</span> <span class="fu">list</span>(<span class="at">format =</span> <span class="st">"${value}"</span>,</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>])),</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>           <span class="at">gridLineColor =</span> bk_colors[<span class="st">"lightGray"</span>],</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>           <span class="at">min =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_xAxis</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Year"</span>,</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>                        <span class="at">style =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>])),</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>           <span class="at">labels =</span> <span class="fu">list</span>(<span class="at">style =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>])),</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>           <span class="at">allowDecimals =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>           <span class="at">tickInterval =</span> <span class="dv">2</span>,</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>           <span class="at">gridLineColor =</span> bk_colors[<span class="st">"lightGray"</span>]) <span class="sc">%&gt;%</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_tooltip</span>(<span class="at">valueDecimals =</span> <span class="dv">2</span>,</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>             <span class="at">valuePrefix =</span> <span class="st">"$"</span>,</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>             <span class="at">headerFormat =</span> <span class="st">"&lt;span style='color:{point.color}'&gt;\u25CF&lt;/span&gt; &lt;b&gt;{series.name}&lt;/b&gt;&lt;br&gt;"</span>,</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>             <span class="at">pointFormat =</span> <span class="st">"Year: {point.x}&lt;br&gt;Govt. Health Expenditure: {point.y}"</span>,</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>             <span class="at">backgroundColor =</span> bk_colors[<span class="st">"lightGray"</span>]) <span class="sc">%&gt;%</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_legend</span>(<span class="at">align =</span> <span class="st">"right"</span>,</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>            <span class="at">verticalAlign =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>            <span class="at">itemStyle =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>]),</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Country"</span>,</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"darkGray"</span>]))) <span class="sc">%&gt;%</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_exporting</span>(<span class="at">enabled =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>               <span class="at">buttons =</span> <span class="fu">list</span>(<span class="at">contextButton =</span> <span class="fu">list</span>(<span class="at">theme =</span> <span class="fu">list</span>(<span class="at">fill =</span> bk_colors[<span class="st">"lightGray"</span>])))) <span class="sc">%&gt;%</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_add_theme</span>(<span class="fu">hc_theme_merge</span>(</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hc_theme_smpl</span>(),</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hc_theme</span>(</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>      <span class="at">chart =</span> <span class="fu">list</span>(<span class="at">backgroundColor =</span> <span class="st">"white"</span>),</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="fu">list</span>(<span class="at">align =</span> <span class="st">"left"</span>),</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend =</span> <span class="fu">list</span>(<span class="at">itemHoverStyle =</span> <span class="fu">list</span>(<span class="at">color =</span> bk_colors[<span class="st">"mediumBlue"</span>]))</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_plotOptions</span>(<span class="at">series =</span> <span class="fu">list</span>(<span class="at">marker =</span> <span class="fu">list</span>(<span class="at">enabled =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>                                             <span class="at">fillColor =</span> <span class="st">"white"</span>,</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>                                             <span class="at">lineWidth =</span> <span class="dv">2</span>,</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>                                             <span class="at">lineColor =</span> <span class="cn">NULL</span>),</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>                               <span class="at">states =</span> <span class="fu">list</span>(<span class="at">hover =</span> <span class="fu">list</span>(<span class="at">halo =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">10</span>)))))</span></code></pre></div>
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-64af9d079e22ed489b6b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-64af9d079e22ed489b6b">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":"Govt. Health Expenditure per Capita Trend in East Africa (2012-2022)","style":{"fontWeight":"bold","fontSize":"20px","color":{"darkGray":"#455A64"}}},"yAxis":{"title":{"text":"Govt. Health Expenditure per Capita ($US)","style":{"color":{"darkGray":"#455A64"}}},"type":"linear","labels":{"format":"${value}","style":{"color":{"darkGray":"#455A64"}}},"gridLineColor":{"lightGray":"#ECEFF1"},"min":0},"credits":{"enabled":false},"exporting":{"enabled":true,"buttons":{"contextButton":{"theme":{"fill":{"lightGray":"#ECEFF1"}}}}},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true,"marker":{"enabled":true,"fillColor":"white","lineWidth":2,"lineColor":null},"states":{"hover":{"halo":{"size":10}}}},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"Burundi","data":[{"location":"Burundi","Year":2012,"Govt_Health_Exp":6.18,"x":2012,"y":6.18},{"location":"Burundi","Year":2013,"Govt_Health_Exp":3.62,"x":2013,"y":3.62},{"location":"Burundi","Year":2014,"Govt_Health_Exp":6.98,"x":2014,"y":6.98},{"location":"Burundi","Year":2015,"Govt_Health_Exp":6.8,"x":2015,"y":6.8},{"location":"Burundi","Year":2016,"Govt_Health_Exp":5.89,"x":2016,"y":5.89},{"location":"Burundi","Year":2017,"Govt_Health_Exp":5.55,"x":2017,"y":5.55},{"location":"Burundi","Year":2018,"Govt_Health_Exp":5.27,"x":2018,"y":5.27},{"location":"Burundi","Year":2019,"Govt_Health_Exp":5.59,"x":2019,"y":5.59},{"location":"Burundi","Year":2020,"Govt_Health_Exp":5.28,"x":2020,"y":5.28},{"location":"Burundi","Year":2021,"Govt_Health_Exp":5.75,"x":2021,"y":5.75},{"location":"Burundi","Year":2022,"Govt_Health_Exp":4.67,"x":2022,"y":4.67}],"type":"line"},{"name":"Democratic Republic of the Congo","data":[{"location":"Democratic Republic of the Congo","Year":2012,"Govt_Health_Exp":2.13,"x":2012,"y":2.13},{"location":"Democratic Republic of the Congo","Year":2013,"Govt_Health_Exp":2.15,"x":2013,"y":2.15},{"location":"Democratic Republic of the Congo","Year":2014,"Govt_Health_Exp":2.52,"x":2014,"y":2.52},{"location":"Democratic Republic of the Congo","Year":2015,"Govt_Health_Exp":3.1,"x":2015,"y":3.1},{"location":"Democratic Republic of the Congo","Year":2016,"Govt_Health_Exp":2.44,"x":2016,"y":2.44},{"location":"Democratic Republic of the Congo","Year":2017,"Govt_Health_Exp":1.81,"x":2017,"y":1.81},{"location":"Democratic Republic of the Congo","Year":2018,"Govt_Health_Exp":2.61,"x":2018,"y":2.61},{"location":"Democratic Republic of the Congo","Year":2019,"Govt_Health_Exp":3.04,"x":2019,"y":3.04},{"location":"Democratic Republic of the Congo","Year":2020,"Govt_Health_Exp":3.3,"x":2020,"y":3.3},{"location":"Democratic Republic of the Congo","Year":2021,"Govt_Health_Exp":3.62,"x":2021,"y":3.62},{"location":"Democratic Republic of the Congo","Year":2022,"Govt_Health_Exp":4.48,"x":2022,"y":4.48}],"type":"line"},{"name":"Kenya","data":[{"location":"Kenya","Year":2012,"Govt_Health_Exp":20.9,"x":2012,"y":20.9},{"location":"Kenya","Year":2013,"Govt_Health_Exp":22.77,"x":2013,"y":22.77},{"location":"Kenya","Year":2014,"Govt_Health_Exp":27.25,"x":2014,"y":27.25},{"location":"Kenya","Year":2015,"Govt_Health_Exp":28.65,"x":2015,"y":28.65},{"location":"Kenya","Year":2016,"Govt_Health_Exp":31.63,"x":2016,"y":31.63},{"location":"Kenya","Year":2017,"Govt_Health_Exp":28.54,"x":2017,"y":28.54},{"location":"Kenya","Year":2018,"Govt_Health_Exp":32.45,"x":2018,"y":32.45},{"location":"Kenya","Year":2019,"Govt_Health_Exp":39.38,"x":2019,"y":39.38},{"location":"Kenya","Year":2020,"Govt_Health_Exp":42.6,"x":2020,"y":42.6},{"location":"Kenya","Year":2021,"Govt_Health_Exp":45.95,"x":2021,"y":45.95},{"location":"Kenya","Year":2022,"Govt_Health_Exp":42.27,"x":2022,"y":42.27}],"type":"line"},{"name":"Rwanda","data":[{"location":"Rwanda","Year":2012,"Govt_Health_Exp":14.52,"x":2012,"y":14.52},{"location":"Rwanda","Year":2013,"Govt_Health_Exp":15.31,"x":2013,"y":15.31},{"location":"Rwanda","Year":2014,"Govt_Health_Exp":15.9,"x":2014,"y":15.9},{"location":"Rwanda","Year":2015,"Govt_Health_Exp":15.45,"x":2015,"y":15.45},{"location":"Rwanda","Year":2016,"Govt_Health_Exp":16.29,"x":2016,"y":16.29},{"location":"Rwanda","Year":2017,"Govt_Health_Exp":16.9,"x":2017,"y":16.9},{"location":"Rwanda","Year":2018,"Govt_Health_Exp":18.08,"x":2018,"y":18.08},{"location":"Rwanda","Year":2019,"Govt_Health_Exp":20.4,"x":2019,"y":20.4},{"location":"Rwanda","Year":2020,"Govt_Health_Exp":23.56,"x":2020,"y":23.56},{"location":"Rwanda","Year":2021,"Govt_Health_Exp":24.78,"x":2021,"y":24.78},{"location":"Rwanda","Year":2022,"Govt_Health_Exp":27.4,"x":2022,"y":27.4}],"type":"line"},{"name":"South Sudan","data":[{"location":"South Sudan","Year":2017,"Govt_Health_Exp":2.37,"x":2017,"y":2.37},{"location":"South Sudan","Year":2018,"Govt_Health_Exp":3.16,"x":2018,"y":3.16},{"location":"South Sudan","Year":2019,"Govt_Health_Exp":3.92,"x":2019,"y":3.92},{"location":"South Sudan","Year":2020,"Govt_Health_Exp":3.64,"x":2020,"y":3.64},{"location":"South Sudan","Year":2021,"Govt_Health_Exp":5.13,"x":2021,"y":5.13},{"location":"South Sudan","Year":2022,"Govt_Health_Exp":4.24,"x":2022,"y":4.24}],"type":"line"},{"name":"Uganda","data":[{"location":"Uganda","Year":2012,"Govt_Health_Exp":8.33,"x":2012,"y":8.33},{"location":"Uganda","Year":2013,"Govt_Health_Exp":8.91,"x":2013,"y":8.91},{"location":"Uganda","Year":2014,"Govt_Health_Exp":9.08,"x":2014,"y":9.08},{"location":"Uganda","Year":2015,"Govt_Health_Exp":6.08,"x":2015,"y":6.08},{"location":"Uganda","Year":2016,"Govt_Health_Exp":6.13,"x":2016,"y":6.13},{"location":"Uganda","Year":2017,"Govt_Health_Exp":5.02,"x":2017,"y":5.02},{"location":"Uganda","Year":2018,"Govt_Health_Exp":5.53,"x":2018,"y":5.53},{"location":"Uganda","Year":2019,"Govt_Health_Exp":5.04,"x":2019,"y":5.04},{"location":"Uganda","Year":2020,"Govt_Health_Exp":10.17,"x":2020,"y":10.17},{"location":"Uganda","Year":2021,"Govt_Health_Exp":10.7,"x":2021,"y":10.7},{"location":"Uganda","Year":2022,"Govt_Health_Exp":9.83,"x":2022,"y":9.83}],"type":"line"},{"name":"United Republic of Tanzania","data":[{"location":"United Republic of Tanzania","Year":2012,"Govt_Health_Exp":9.84,"x":2012,"y":9.84},{"location":"United Republic of Tanzania","Year":2013,"Govt_Health_Exp":11.09,"x":2013,"y":11.09},{"location":"United Republic of Tanzania","Year":2014,"Govt_Health_Exp":11.91,"x":2014,"y":11.91},{"location":"United Republic of Tanzania","Year":2015,"Govt_Health_Exp":11.46,"x":2015,"y":11.46},{"location":"United Republic of Tanzania","Year":2016,"Govt_Health_Exp":14.89,"x":2016,"y":14.89},{"location":"United Republic of Tanzania","Year":2017,"Govt_Health_Exp":15.11,"x":2017,"y":15.11},{"location":"United Republic of Tanzania","Year":2018,"Govt_Health_Exp":15.51,"x":2018,"y":15.51},{"location":"United Republic of Tanzania","Year":2019,"Govt_Health_Exp":16.21,"x":2019,"y":16.21},{"location":"United Republic of Tanzania","Year":2020,"Govt_Health_Exp":8.960000000000001,"x":2020,"y":8.960000000000001},{"location":"United Republic of Tanzania","Year":2021,"Govt_Health_Exp":10.22,"x":2021,"y":10.22},{"location":"United Republic of Tanzania","Year":2022,"Govt_Health_Exp":11.25,"x":2022,"y":11.25}],"type":"line"}],"xAxis":{"type":"linear","title":{"text":"Year","style":{"color":{"darkGray":"#455A64"}}},"labels":{"style":{"color":{"darkGray":"#455A64"}}},"allowDecimals":false,"tickInterval":2,"gridLineColor":{"lightGray":"#ECEFF1"}},"colors":["#0A4C7F","#1976D2","#64B5F6","#00ACC1","#0D47A1"],"subtitle":{"text":"Current international US$","style":{"color":{"darkGray":"#455A64"}}},"tooltip":{"valueDecimals":2,"valuePrefix":"$","headerFormat":"<span style='color:{point.color}'>●<\/span> <b>{series.name}<\/b><br>","pointFormat":"Year: {point.x}<br>Govt. Health Expenditure: {point.y}","backgroundColor":{"lightGray":"#ECEFF1"}},"legend":{"align":"right","verticalAlign":"bottom","itemStyle":{"color":{"darkGray":"#455A64"}},"title":{"text":"Country","style":{"color":{"darkGray":"#455A64"}}}}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"},"backgroundColor":"white"},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom","itemHoverStyle":{"color":{"mediumBlue":"#1976D2"}}},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
