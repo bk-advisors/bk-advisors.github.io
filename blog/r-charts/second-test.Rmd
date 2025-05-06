@@ -1,0 +1,90 @@
+---
+title: "Exhibit 1"
+output: html_document
+date: "2025-05-06"
+---
+
+```{r }
+# Load required packages
+library(tidyverse)
+library(readxl)
+library(highcharter)
+
+# BK Advisors color palette
+bk_colors <- list(  # Define as list instead of vector
+  deepBlue = "#0A4C7F",
+  mediumBlue = "#1976D2",
+  lightBlue = "#64B5F6",
+  teal = "#00ACC1",
+  navy = "#0D47A1",
+  darkGray = "#455A64",
+  lightGray = "#ECEFF1"
+)
+
+# Define East African countries
+east_africa <- c("Burundi", "Kenya", "Rwanda", "Uganda", "Tanzania")
+
+# Read and clean data
+health_exp <- read_excel("./data/who_health_exp_per_capita.xls", sheet = "Data", skip = 3) %>%
+  filter(`Country Name` %in% east_africa) %>%
+  select(`Country Name`, `2012`:`2022`) %>%
+  pivot_longer(cols = -`Country Name`, 
+               names_to = "Year", 
+               values_to = "Expenditure") %>%
+  mutate(Year = as.numeric(Year),
+         Expenditure = round(as.numeric(Expenditure), 2),
+         `Country Name` = factor(`Country Name`, levels = east_africa)) %>%
+  arrange(`Country Name`, Year)
+
+# Create interactive visualization with brand colors
+hchart(health_exp, 
+       type = "line",
+       hcaes(x = Year, 
+             y = Expenditure, 
+             group = `Country Name`)) %>%
+  hc_colors(as.list(unname(bk_colors))[1:5]) %>% # Changed to as.list(unname())
+  hc_title(text = "Health Expenditure per Capita Trend in East Africa (2012-2022)",
+           style = list(fontWeight = "bold", 
+                        fontSize = "20px",
+                        color = bk_colors["darkGray"])) %>%
+  hc_subtitle(text = "Current international $, PPP adjusted",
+              style = list(color = bk_colors["darkGray"])) %>%
+  hc_yAxis(title = list(text = "Health Expenditure per Capita (PPP $)",
+                        style = list(color = bk_colors["darkGray"])),
+           labels = list(format = "${value}",
+                         style = list(color = bk_colors["darkGray"])),
+           gridLineColor = bk_colors["lightGray"],
+           min = 0) %>%
+  hc_xAxis(title = list(text = "Year",
+                        style = list(color = bk_colors["darkGray"])),
+           labels = list(style = list(color = bk_colors["darkGray"])),
+           allowDecimals = FALSE,
+           tickInterval = 2,
+           gridLineColor = bk_colors["lightGray"]) %>%
+  hc_tooltip(valueDecimals = 2,
+             valuePrefix = "$",
+             headerFormat = "<span style='color:{point.color}'>\u25CF</span> <b>{series.name}</b><br>",
+             pointFormat = "Year: {point.x}<br>Expenditure: {point.y}",
+             backgroundColor = bk_colors["lightGray"]) %>%
+  hc_legend(align = "right",
+            verticalAlign = "bottom",
+            itemStyle = list(color = bk_colors["darkGray"]),
+            title = list(text = "Country",
+                         style = list(color = bk_colors["darkGray"]))) %>%
+  hc_exporting(enabled = TRUE,
+               buttons = list(contextButton = list(theme = list(fill = bk_colors["lightGray"])))) %>%
+  hc_add_theme(hc_theme_merge(
+    hc_theme_smpl(),
+    hc_theme(
+      chart = list(backgroundColor = "white"),
+      title = list(align = "left"),
+      legend = list(itemHoverStyle = list(color = bk_colors["mediumBlue"]))
+    )
+  )) %>%
+  hc_plotOptions(series = list(marker = list(enabled = TRUE,
+                                             fillColor = "white",
+                                             lineWidth = 2,
+                                             lineColor = NULL),
+                               states = list(hover = list(halo = list(size = 10)))))
+
+```
