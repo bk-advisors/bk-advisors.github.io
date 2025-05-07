@@ -38,13 +38,13 @@ hchart(eac_govt_health_exp,
              y = Govt_Health_Exp, 
              group = location)) %>%
   hc_colors(as.list(unname(bk_colors))[1:5]) %>% # Changed to as.list(unname())
-  hc_title(text = "Government Health Expenditure per Capita Trend in East Africa (2012-2022)",
+  hc_title(text = "Government Health Spending per Person in East Africa (2012-2022)",
            style = list(fontWeight = "bold", 
                         fontSize = "20px",
                         color = bk_colors["darkGray"])) %>%
   hc_subtitle(text = "Current international $US",
               style = list(color = bk_colors["darkGray"])) %>%
-  hc_yAxis(title = list(text = "Govt. Health Expenditure per Capita ($US)",
+  hc_yAxis(title = list(text = "Govt. Health Spending per Person ($US)",
                         style = list(color = bk_colors["darkGray"])),
            labels = list(format = "${value}",
                          style = list(color = bk_colors["darkGray"])),
@@ -59,7 +59,7 @@ hchart(eac_govt_health_exp,
   hc_tooltip(valueDecimals = 2,
              valuePrefix = "$",
              headerFormat = "<span style='color:{point.color}'>\u25CF</span> <b>{series.name}</b><br>",
-             pointFormat = "Year: {point.x}<br>Govt. Health Expenditure: {point.y}",
+             pointFormat = "Year: {point.x}<br>Govt. Health Spending: {point.y}",
              backgroundColor = bk_colors["lightGray"]) %>%
   hc_legend(element_blank) %>%
   hc_caption(
