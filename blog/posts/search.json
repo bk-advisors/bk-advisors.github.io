@@ -299,5 +299,103 @@
     "title": "Exhibit-1 Health Financing in UG",
     "section": "",
     "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(highcharter)\n\nWarning: package 'highcharter' was built under R version 4.4.2\n\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\nlibrary(readxl)\n\n# BK Advisors color palette\nbk_colors &lt;- list(  # Define as list instead of vector\n  deepBlue = \"#0A4C7F\",\n  mediumBlue = \"#1976D2\",\n  lightBlue = \"#64B5F6\",\n  teal = \"#00ACC1\",\n  navy = \"#0D47A1\",\n  darkGray = \"#455A64\",\n  lightGray = \"#ECEFF1\"\n)\n\n# Define East African countries (verify names match WHO data)\neast_africa &lt;- c(\"Burundi\", \"Kenya\", \"Rwanda\", \"Uganda\", \"United Republic of Tanzania\",\"South Sudan\",\"Democratic Republic of the Congo\")\n\n# Read csv file\n\neac_govt_health_exp &lt;- read.csv(\"./data/eac-govt-health-exp.csv\")\n\neac_govt_health_exp &lt;- eac_govt_health_exp |&gt; \n  select(location,Year,Govt_Health_Exp)\n\n# Visualization thats compliant with color palette\nhchart(eac_govt_health_exp, \n       type = \"line\",\n       hcaes(x = Year, \n             y = Govt_Health_Exp, \n             group = location)) %&gt;%\n  hc_colors(as.list(unname(bk_colors))[1:5]) %&gt;% # Changed to as.list(unname())\n  hc_title(text = \"Government Health Spending per Person in East Africa (2012-2022)\",\n           style = list(fontWeight = \"bold\", \n                        fontSize = \"20px\",\n                        color = bk_colors[\"darkGray\"])) %&gt;%\n  hc_subtitle(text = \"Current international $US\",\n              style = list(color = bk_colors[\"darkGray\"])) %&gt;%\n  hc_yAxis(title = list(text = \"Govt. Health Spending per Person ($US)\",\n                        style = list(color = bk_colors[\"darkGray\"])),\n           labels = list(format = \"${value}\",\n                         style = list(color = bk_colors[\"darkGray\"])),\n           gridLineColor = bk_colors[\"lightGray\"],\n           min = 0) %&gt;%\n  hc_xAxis(title = list(text = \"Year\",\n                        style = list(color = bk_colors[\"darkGray\"])),\n           labels = list(style = list(color = bk_colors[\"darkGray\"])),\n           allowDecimals = FALSE,\n           tickInterval = 2,\n           gridLineColor = bk_colors[\"lightGray\"]) %&gt;%\n  hc_tooltip(valueDecimals = 2,\n             valuePrefix = \"$\",\n             headerFormat = \"&lt;span style='color:{point.color}'&gt;\\u25CF&lt;/span&gt; &lt;b&gt;{series.name}&lt;/b&gt;&lt;br&gt;\",\n             pointFormat = \"Year: {point.x}&lt;br&gt;Govt. Health Spending: {point.y}\",\n             backgroundColor = bk_colors[\"lightGray\"]) %&gt;%\n  hc_legend(element_blank) %&gt;%\n  hc_caption(\n    text = \"Source: WHO Global Health Expenditure Database\",\n    style = list(fontSize = \"10px\")) %&gt;%\n  hc_exporting(enabled = TRUE,\n               buttons = list(contextButton = list(theme = list(fill = bk_colors[\"lightGray\"])))) %&gt;%\n  hc_add_theme(hc_theme_merge(\n    hc_theme_smpl(),\n    hc_theme(\n      chart = list(backgroundColor = \"white\"),\n      title = list(align = \"left\"),\n      legend = list(itemHoverStyle = list(color = bk_colors[\"mediumBlue\"]))\n    )\n  )) %&gt;%\n  hc_plotOptions(series = list(\n    marker = list(enabled = TRUE,\n                  fillColor = \"white\",\n                  lineWidth = 2,\n                  lineColor = NULL),\n    dataLabels = list(\n      enabled = TRUE,\n      allowOverlap = FALSE,\n      formatter = JS(\"function() {\n      if (this.point.x === 2022) {\n        return '&lt;span style=\\\"color: ' + this.series.color + '\\\"&gt;' + \n               this.series.name + '&lt;/span&gt;';\n      }\n      return '';\n    }\"),\n      style = list(color = bk_colors[\"darkGray\"], \n                   fontSize = \"12px\",\n                   textOutline = \"none\"),\n      align = \"left\",\n      x = 5\n    ),\n    states = list(hover = list(halo = list(size = 10)))\n  ))"
+  },
+  {
+    "objectID": "why-african-govts-struggle.html",
+    "href": "why-african-govts-struggle.html",
+    "title": "Why African Governments Struggle to Fund Public Health",
+    "section": "",
+    "text": "In my previous post, I shared a personal story to illustrate the negative impact of a failing health system. That specific example was just a microcosm of a wider issue.\nAcross Sub-Saharan Africa, falling sick is often a life-altering event for many of us. Families go into debt over hospital bills. Clinics lack basics like gloves, gauze and paracetamol. Preventable diseases still claim lives. And yet, the region has never had more external money available to fund public health than it has received in recent decades. Its a paradox.\nBetween 2000 and 2022, total health expenditures as a share of GDP in most Sub-Saharan African countries increased, thanks primarily to sustained donor flows. Uganda, for example, receives hundreds of millions of dollars annually from the U.S. government, the Global Fund, Gavi, and other donors.\n[Placeholder : Insert chart showing total health expenditures as a share of GDP for Uganda]\nSo why are so many health systems still failing?\nThe answer: They are failing because the system is poorly designed and has many points of financial leakage & displacement."
+  },
+  {
+    "objectID": "why-african-govts-struggle.html#references",
+    "href": "why-african-govts-struggle.html#references",
+    "title": "Why African Governments Struggle to Fund Public Health",
+    "section": "References",
+    "text": "References\n\nhttps://apps.who.int/nha/database/Select/Indicators/en\nhttps://www.afro.who.int/publications/who-african-region-health-expenditure-atlas-2023-0"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html",
+    "href": "r-charts/bar-chart-template.html",
+    "title": "Bar chart template",
+    "section": "",
+    "text": "Code\nlibrary(grid)\nlibrary(tidyverse)\nlibrary(shadowtext)"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#load-packages",
+    "href": "r-charts/bar-chart-template.html#load-packages",
+    "title": "Bar chart template",
+    "section": "",
+    "text": "Code\nlibrary(grid)\nlibrary(tidyverse)\nlibrary(shadowtext)"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#original-chart-were-trying-to-recreate",
+    "href": "r-charts/bar-chart-template.html#original-chart-were-trying-to-recreate",
+    "title": "Bar chart template",
+    "section": "Original chart we’re trying to recreate",
+    "text": "Original chart we’re trying to recreate\n\n\n\nOriginal"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#create-dataset",
+    "href": "r-charts/bar-chart-template.html#create-dataset",
+    "title": "Bar chart template",
+    "section": "Create dataset",
+    "text": "Create dataset\n\n\nCode\nnames &lt;- c(\n    \"Hantavirus\", \"Tularemia\", \"Dengue\", \"Ebola\", \"E. coli\", \n    \"Tuberculosis\", \"Salmonella\", \"Vaccinia\", \"Brucella\"\n  )\n  \n# Name is an ordered factor. We do this to ensure the bars are sorted.\ndata &lt;- data.frame(\n  count = c(6, 7, 7, 9, 11, 15, 17, 18, 54), \n  name = factor(names, levels = names),\n  y = seq(length(names)) * 0.9\n)\n\n# Let's also define the colors\nBLUE &lt;- \"#076fa2\"\nRED &lt;- \"#E3120B\"\nBLACK &lt;- \"#202020\"\nGREY &lt;- \"grey50\""
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#basic-bar-chart",
+    "href": "r-charts/bar-chart-template.html#basic-bar-chart",
+    "title": "Bar chart template",
+    "section": "Basic Bar Chart",
+    "text": "Basic Bar Chart\n\n\nCode\nplt &lt;- ggplot(data) +\n  geom_col(aes(count, name), fill = BLUE, width = 0.6) \n\nplt\n\n\n\n\n\nBasic Bar Chart"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#customized-bar-chart---v2-layout",
+    "href": "r-charts/bar-chart-template.html#customized-bar-chart---v2-layout",
+    "title": "Bar chart template",
+    "section": "Customized Bar chart - v2 layout",
+    "text": "Customized Bar chart - v2 layout\n\n\nCode\n# Working on the x and y scales + adjusting the axes\n\nplt2 &lt;- plt + \n  scale_x_continuous(\n    limits = c(0, 55.5),\n    breaks = seq(0, 55, by = 5), \n    expand = c(0, 0), # The horizontal axis does not extend to either side\n    position = \"top\"  # Labels are located on the top\n  ) +\n  \n  # The vertical axis only extends upwards \n  scale_y_discrete(expand = expansion(add = c(0, 0.5))) +\n  theme(\n    \n    # Set background color to white\n    panel.background = element_rect(fill = \"white\"),\n    \n    # Set the color and the width of the grid lines for the horizontal axis\n    panel.grid.major.x = element_line(color = \"#A8BAC4\", size = 0.3),\n    \n    # Remove tick marks by setting their length to 0\n    axis.ticks.length = unit(0, \"mm\"),\n    \n    # Remove the title for both axes\n    axis.title = element_blank(),\n    \n    # Only left line of the vertical axis is painted in black\n    axis.line.y.left = element_line(color = \"black\"),\n    \n    # Remove labels from the vertical axis\n    axis.text.y = element_blank(),\n    \n    # But customize labels for the horizontal axis\n    axis.text.x = element_text(family = \"Econ Sans Cnd\", size = 16)\n  )\n\nplt2\n\n\n\n\n\nBar Chart - v2"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#bar-chart---v3---adding-labels",
+    "href": "r-charts/bar-chart-template.html#bar-chart---v3---adding-labels",
+    "title": "Bar chart template",
+    "section": "Bar chart - v3 - Adding Labels",
+    "text": "Bar chart - v3 - Adding Labels\n\n\nCode\n# Adding Labels\nplt3 &lt;- plt2 + \n  geom_shadowtext( # used to draw text with shadow to the right of the bars of the diseases with a count below 8\n    data = subset(data, count &lt; 8),\n    aes(count, y = name, label = name),\n    hjust = 0,\n    nudge_x = 0.3,\n    colour = BLUE,\n    bg.colour = \"white\",\n    bg.r = 0.2,\n    family = \"Econ Sans Cnd\",\n    size = 7\n  ) + \n  geom_text( # used to draw regular text within the bars of the diseases with a count equal or above 8\n    data = subset(data, count &gt;= 8),\n    aes(0, y = name, label = name),\n    hjust = 0,\n    nudge_x = 0.3,\n    colour = \"white\",\n    family = \"Econ Sans Cnd\",\n    size = 7\n  )\n\nplt3\n\n\n\n\n\nBar Chart - v3 - with Labels"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#bar-chart---v4---adding-annotations-and-more-tweaks",
+    "href": "r-charts/bar-chart-template.html#bar-chart---v4---adding-annotations-and-more-tweaks",
+    "title": "Bar chart template",
+    "section": "Bar chart - v4 - Adding Annotations and More Tweaks",
+    "text": "Bar chart - v4 - Adding Annotations and More Tweaks\n\n\nCode\nplt4 &lt;- plt3 +\n  labs(\n    title = \"Escape artists\",\n    subtitle = \"Number of laboratory-acquired infections, 1970-2021\"\n  ) + \n  theme(\n    plot.title = element_text(\n      family = \"Econ Sans Cnd\", \n      face = \"bold\",\n      size = 22\n    ),\n    plot.subtitle = element_text(\n      family = \"Econ Sans Cnd\",\n      size = 20\n    )\n  )\n\nplt4\n\n\n\n\n\nBar Chart - v4 - Annotations and More Tweaks"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#just-a-little-more-to-get-it-closer-to-the-original",
+    "href": "r-charts/bar-chart-template.html#just-a-little-more-to-get-it-closer-to-the-original",
+    "title": "Bar chart template",
+    "section": "Just a little more, to get it closer to the original",
+    "text": "Just a little more, to get it closer to the original\n\n\nCode\n# Make room for more annotations\nplt5 &lt;- plt4 + \n  theme(\n    plot.margin = margin(0.05, 0, 0.1, 0.01, \"npc\") # top, bottom, left, right\n  )\n\n# Print the ggplot2 plot\nplt5\n\n# Add horizontal line on top\n# It goes from x = 0 (left) to x = 1 (right) on the very top of the chart (y = 1)\n# You can think of 'gp' and 'gpar' as 'graphical parameters'.\n# There we indicate the line color and width\ngrid.lines(\n  x = c(0, 1),\n  y = 1,\n  gp = gpar(col = \"#e5001c\", lwd = 4)\n)\n\n# Add rectangle on top-left\n# lwd = 0 means the rectangle does not have an outer line\n# 'just' gives the horizontal and vertical justification\ngrid.rect(\n  x = 0,\n  y = 1,\n  width = 0.05,\n  height = 0.025,\n  just = c(\"left\", \"top\"),\n  gp = gpar(fill = \"#e5001c\", lwd = 0)\n)\n\n# We have two captions, so we use grid.text instead of \n# the caption provided by  ggplot2.\ngrid.text(\n  \"Sources: Laboratory-Acquired Infection Database; American Biological Safety Association\", \n  x = 0.005, \n  y = 0.06, \n  just = c(\"left\", \"bottom\"),\n  gp = gpar(\n    col = GREY,\n    fontsize = 16,\n    fontfamily = \"Econ Sans Cnd\"\n  )\n)\ngrid.text(\n  \"BK Advisors\", \n  x = 0.005, \n  y = 0.005, \n  just = c(\"left\", \"bottom\"),\n  gp = gpar(\n    col = GREY,\n    fontsize = 16,\n    fontfamily = \"Milo TE W01\"\n  )\n)\n\n\n\n\n\nBar Chart - v5 - Top line and other things using the grid library"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#final-polish---v6",
+    "href": "r-charts/bar-chart-template.html#final-polish---v6",
+    "title": "Bar chart template",
+    "section": "Final polish - v6",
+    "text": "Final polish - v6\n\n\nCode\n# Going the extramile\n\nplt6 &lt;- plt5 + \n  labs(title = NULL, subtitle = NULL) +\n  theme(\n    plot.margin = margin(0.15, 0, 0.1, 0.01, \"npc\")\n  )\n\nplt6 \n\ngrid.text(\n  \"Escape artists\", \n  0, \n  0.925,\n  just = c(\"left\", \"bottom\"),\n  gp = gpar(\n    fontsize = 22,\n    fontface = \"bold\",\n    fontfamily = \"Econ Sans Cnd\"\n  )\n)\n\ngrid.text(\n  \"Number of laboratory-acquired infections, 1970-2021\", \n  0, \n  0.875,\n  just = c(\"left\", \"bottom\"),\n  gp = gpar(\n    fontsize = 20,\n    fontfamily = \"Econ Sans Cnd\"\n  )\n)\n\ngrid.lines(\n  x = c(0, 1),\n  y = 1,\n  gp = gpar(col = \"#e5001c\", lwd = 4)\n)\n\ngrid.rect(\n  x = 0,\n  y = 1,\n  width = 0.05,\n  height = 0.025,\n  just = c(\"left\", \"top\"),\n  gp = gpar(fill = \"#e5001c\", lwd = 0)\n)\n\ngrid.text(\n  \"Sources: Laboratory-Acquired Infection Database; American Biological Safety Association\", \n  x = 0.005, \n  y = 0.06, \n  just = c(\"left\", \"bottom\"),\n  gp = gpar(\n    col = GREY,\n    fontsize = 16,\n    fontfamily = \"Econ Sans Cnd\"\n  )\n)\n\ngrid.text(\n  \"BK Advisors\", \n  x = 0.005, \n  y = 0.005, \n  just = c(\"left\", \"bottom\"),\n  gp = gpar(\n    col = GREY,\n    fontsize = 16,\n    fontfamily = \"Milo TE W01\"\n  )\n)\n\n\n\n\n\nBar Chart - v6 - Final polish"
+  },
+  {
+    "objectID": "r-charts/bar-chart-template.html#references",
+    "href": "r-charts/bar-chart-template.html#references",
+    "title": "Bar chart template",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "why-african-govts-struggle.html#money-goes-in-but-health-outcomes-dont-come-out",
+    "href": "why-african-govts-struggle.html#money-goes-in-but-health-outcomes-dont-come-out",
+    "title": "Why African Governments Struggle to Fund Public Health",
+    "section": "Money Goes In, But Health Outcomes Don’t Come Out",
+    "text": "Money Goes In, But Health Outcomes Don’t Come Out\nIn theory, African governments are committed to health. The Abuja Declaration of 2001 asked countries to allocate 15% of their national budgets to health and they all promised to do this. In reality, Only a few ever did, and most spend between 5–8% of the annual government budget on health.\nMeanwhile, donor aid for health continues to pour in and this creates the illusion of progress which must be debunked. When I dug into the existing research and numbers, the problem became clearer and stems from 5 key drivers:\n\nThe “substitution effect”: Government budget allocations to health shrink as aid increases\nDebt repayments take priority over health budgets\nMilitary spending expands quietly to shield the political elite, shielded from scrutiny\nTax collection is regressive, protecting the wealthy and burdening the poor\nCorruption drains national coffers through procurement and payroll systems fraud\n\nEach of these drivers bleeds the system, not in isolation - but as an ecosystem of different points of failure.\n[Placeholder : Insert problem tree to show casual map and group into external and internal drives at key line]\n…"
   }
 ]
