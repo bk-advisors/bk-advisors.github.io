@@ -1,0 +1,41 @@
+Fiscal_Year,Category,Item,Amount_UGX_trn,Amount_USD_bn,Perc_Budget
+2024/25,Total,Total National Budget,72.136,19.496,100
+2024/25,Sector,Health,2.95,0.797,4.09
+2024/25,Sector,Education,4.8,1.297,6.66
+2024/25,Sector,Agriculture,1.1,0.297,1.53
+2024/25,Sector,"Climate Change/Water, Sanitation & Environment",0.745,0.201,1.03
+2024/25,Sector,Social Protection,0.405,0.109,0.56
+2024/25,Sector,Infrastructure (Works and Transport),5.5,1.486,7.63
+2024/25,Sector,Defence,3.5,0.946,4.85
+2024/25,Sector,Energy,1.5,0.405,2.08
+2024/25,Sector,Parish Development Model (PDM),1.059,0.286,1.47
+2024/25,Sector,Tourism,0,0,0
+2024/25,Sector,"Housing, Urban Development, and Public Works",0,0,0
+2024/25,Sector,ICT,0,0,0
+2024/25,Sector,Governance and Justice,0,0,0
+2024/25,Sector,Other Sectors,4,1.081,5.55
+2024/25,Functional,Debt Servicing,27,7.297,37.44
+2024/25,Functional,Interest payments,10.03,2.711,13.91
+2024/25,Functional,Salaries (Public Sector),8.57,2.316,11.88
+2024/25,Functional,Development Projects,34.7,9.378,48.11
+2024/25,Functional,Recurrent Expenditure,18.9,5.108,26.2
+2025/26,Total,Total National Budget,72.38,19.562,100
+2025/26,Sector,Health,5.87,1.586,8.11
+2025/26,Sector,Education,5.04,1.362,6.96
+2025/26,Sector,Agriculture,0.816,0.22,1.13
+2025/26,Sector,"Climate Change/Water, Sanitation & Environment",0.365,0.099,0.5
+2025/26,Sector,Social Protection,0.405,0.109,0.56
+2025/26,Sector,Infrastructure (Works and Transport),5.7,1.541,7.87
+2025/26,Sector,Defence,3.7,1,5.11
+2025/26,Sector,Energy,1.6,0.432,2.21
+2025/26,Sector,Parish Development Model (PDM),1.059,0.286,1.46
+2025/26,Sector,Tourism,0.43,0.116,0.59
+2025/26,Sector,"Housing, Urban Development, and Public Works",0.12,0.032,0.17
+2025/26,Sector,ICT,0.013,0.003,0.02
+2025/26,Sector,Governance and Justice,0.048,0.013,0.07
+2025/26,Sector,Other Sectors,2.4,0.649,3.32
+2025/26,Functional,Debt Servicing,27,7.297,37.3
+2025/26,Functional,Interest payments,11.3,3.054,15.61
+2025/26,Functional,Salaries (Public Sector),8.57,2.316,11.84
+2025/26,Functional,Development Projects,18.24,4.93,25.2
+2025/26,Functional,Recurrent Expenditure,28.33,7.657,39.14
