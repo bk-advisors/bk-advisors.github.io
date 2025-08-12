@@ -1,0 +1,59 @@
+---
+title: <span style="color:white">The Displacement Effect</span>
+subtitle: "Exploring the effect in Sub-Sarahan African (SSA) Countries (2000-2022)"
+
+author: 
+- name: "Matthew Kuch"
+  email: matt@bk-advisors.com
+date: 08/12/2025
+
+title-block-banner: true
+title-block-banner-color: "black"
+
+format: html
+html:
+code-fold: true
+code-summary: "Code"
+echo: true
+css: style.css
+toc: true
+toc-location: left
+number-sections: false
+editor: visual
+fig-cap-location: margin
+---
+
+## The Spark of Curiosity
+
+There's probably something many don't know about me; I have a peculiar past-time or hobby, if you like.
+
+Whenever I come across a new idea or hypothesis or theory - I try to look for available data to test it, just out of curiosity, to see the limits of the theory or edge cases.
+
+Same it true for the "displacement effect", which I wrote about this week on Linkedin.
+
+In this more technical post, I'll walk you through my analysis of the WHO GHED (Global Health Expenditure Data) from 2000 to 2022 to test the claim I made in the article, that:
+
+>  *"an increase is funding to public health from external donors, leads to the government spending less on public health."*
+
+## The Core Question
+
+The core question I'll be asking is this:
+
+> “If donors give more money to a country’s health budget one year, does the government spend less of its own money the next year?”
+
+Like I mentioned in my article, its kind of like if your child received a partial scholarship as a contribution to their school fees, for say good performance, but instead of stepping up as a parent and paying the balance - you instead stop paying school fees altogether and use the money you had to buy the new iPhone.\
+
+That’s the **displacement effect** - when outside help replaces rather than adds to your own effort.
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
