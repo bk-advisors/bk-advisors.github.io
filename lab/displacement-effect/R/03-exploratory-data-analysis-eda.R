@@ -140,3 +140,29 @@ p_facets <- ggplot(index_df, aes(year, index, color = series)) +
 p_facets
 
 
+# Approach B : Cleaner code - step by step --------------------------------
+
+# ================================
+# Displacement Effect by Country
+# Years: 2000–2022
+# Region: Sub-Saharan Africa (SSA)
+# Data: GHED_small.xlsx (Sheet1)
+# ================================
+
+# --- Packages ---
+library(readxl)
+library(tidyverse)
+library(broom)
+library(purrr)
+library(scales)
+library(countrycode) # to classify SSA countries
+
+# --- Settings ---
+path_xlsx <- "./output/GHED_small.xlsx"  # adjust path if needed
+sheet_nm  <- "Sheet1"
+yr_min    <- 2000
+yr_max    <- 2022
+
+# --- 1) Load data ---
+raw <- read_excel(path_xlsx, sheet = sheet_nm)
+

@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -129,6 +95,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#the-spark-of-curiosity" id="toc-the-spark-of-curiosity" class="nav-link active" data-scroll-target="#the-spark-of-curiosity">The Spark of Curiosity</a></li>
   <li><a href="#the-core-question" id="toc-the-core-question" class="nav-link" data-scroll-target="#the-core-question">The Core Question</a></li>
+  <li><a href="#the-dataset" id="toc-the-dataset" class="nav-link" data-scroll-target="#the-dataset"><strong>The Dataset</strong></a></li>
+  <li><a href="#the-analysis-steps" id="toc-the-analysis-steps" class="nav-link" data-scroll-target="#the-analysis-steps"><strong>The Analysis Steps</strong></a></li>
+  <li><a href="#the-results-and-how-to-read-them" id="toc-the-results-and-how-to-read-them" class="nav-link" data-scroll-target="#the-results-and-how-to-read-them"><strong>The Results and How to Read Them</strong></a>
+  <ul class="collapse">
+  <li><a href="#a.-the-regression-table" id="toc-a.-the-regression-table" class="nav-link" data-scroll-target="#a.-the-regression-table"><strong>A. The Regression Table</strong></a></li>
+  <li><a href="#b.-country-specific-slopes-visualization" id="toc-b.-country-specific-slopes-visualization" class="nav-link" data-scroll-target="#b.-country-specific-slopes-visualization"><strong>B. Country-Specific Slopes (Visualization)</strong></a></li>
+  </ul></li>
+  <li><a href="#how-to-interpret" id="toc-how-to-interpret" class="nav-link" data-scroll-target="#how-to-interpret"><strong>How to Interpret</strong></a></li>
+  <li><a href="#referencessourcescitations" id="toc-referencessourcescitations" class="nav-link" data-scroll-target="#referencessourcescitations">References/Sources/Citations:</a></li>
   </ul>
 </nav>
 </div>
@@ -158,23 +133,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>Like I mentioned in my article, its kind of like if your child received a partial scholarship as a contribution to their school fees, for say good performance, but instead of stepping up as a parent and paying the balance - you instead stop paying school fees altogether and use the money you had to buy the new iPhone.<br>
 </p>
-<p>That’s the <strong>displacement effect</strong> - when outside help replaces rather than adds to your own effort.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<p>That’s the <strong>displacement effect,</strong> in a nutshell i.e.&nbsp;when outside help replaces rather than adds to your own domestic efforts.</p>
+</section>
+<section id="the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="the-dataset"><strong>The Dataset</strong></h2>
+<p>From WHO’s Global Health Expenditure Database for 6 East African countries (2012–2022), we use:</p>
+<ul>
+<li><p><strong>Government health spending per person</strong> (money from the country itself)</p></li>
+<li><p><strong>External health spending per person</strong> (money from donors and aid agencies).</p></li>
+</ul>
+</section>
+<section id="the-analysis-steps" class="level2">
+<h2 class="anchored" data-anchor-id="the-analysis-steps"><strong>The Analysis Steps</strong></h2>
+<p>The R code does three big things:</p>
+<ol type="1">
+<li><strong>Prepares the data</strong></li>
+</ol>
+<pre><code>-   Picks the countries and years we care about
+
+-   Calculates **year-to-year changes** in government spending.\
+    (Example: If 2020 gov’t spend was \$55 and 2019 was \$50 → change = +\$5.)
+
+-   Records **last year’s donor spending** for each year (the “lag”)</code></pre>
+<ol start="2" type="1">
+<li><strong>Runs a regression model</strong></li>
+</ol>
+<pre><code>-   Compares each country **to itself** over time (this removes differences between countries).
+
+-   Looks at the relationship between **last year’s donor funding** and **this year’s change in gov’t spending**.
+
+    -   If the result is **negative**, it suggests a displacement effect.</code></pre>
+<ol start="3" type="1">
+<li><strong>Makes visualizations</strong> to see the patterns.</li>
+</ol>
+</section>
+<section id="the-results-and-how-to-read-them" class="level2">
+<h2 class="anchored" data-anchor-id="the-results-and-how-to-read-them"><strong>The Results and How to Read Them</strong></h2>
+<section id="a.-the-regression-table" class="level3">
+<h3 class="anchored" data-anchor-id="a.-the-regression-table"><strong>A. The Regression Table</strong></h3>
+<ul>
+<li><p><strong>Key number (beta)</strong> = how much government spending changes when donor money goes up by $1 per person (from the year before).</p></li>
+<li><p><strong>If beta is negative</strong> (e.g., -0.40), it means:<br>
+<em>For every extra $1 per person from donors, government spending drops by 40 cents the next year.</em></p></li>
+<li><p><strong>Confidence interval</strong> shows the range we’re fairly sure the true effect is in.</p></li>
+</ul>
+</section>
+<section id="b.-country-specific-slopes-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="b.-country-specific-slopes-visualization"><strong>B. Country-Specific Slopes (Visualization)</strong></h3>
+<ul>
+<li><p>Each country gets its own “beta” line showing how its gov’t spending reacts to donor funding.</p></li>
+<li><p>If the dot is left of zero → displacement effect.</p></li>
+<li><p>If the dot is right of zero → no displacement (donor funds seem to add to gov’t funds).</p></li>
+</ul>
+</section>
+</section>
+<section id="how-to-interpret" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-interpret"><strong>How to Interpret</strong></h2>
+<ul>
+<li><p><strong>Negative relationship = displacement:</strong> government spending drops when donors give more.</p></li>
+<li><p><strong>Positive relationship = crowding in:</strong> donor funds encourage governments to also spend more.</p></li>
+<li><p>This isn’t about “good” or “bad” - it’s about understanding <strong>how funding systems react</strong> so policies can be designed better.</p></li>
+</ul>
+</section>
+<section id="referencessourcescitations" class="level1">
+<h1>References/Sources/Citations:</h1>
+<ul>
+<li>….</li>
+</ul>
 </section>
 
 </main>
