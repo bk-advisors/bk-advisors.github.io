@@ -1,0 +1,120 @@
+/*-- scss:defaults --*/
+
+// BK Advisors brand palette (from bk-advisors.com)
+$bk-blue:   #0d6efd;
+$bk-navy:   #0a2540;   // deep navy used for the hero overlay
+$bk-accent: #e5001c;
+$bk-ink:    #2c3e50;
+
+$primary:                $bk-blue;
+$body-color:             $bk-ink;
+$link-color:             $bk-blue;
+$link-hover-color:       darken($bk-blue, 12%);
+$navbar-light-bg:        #ffffff;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family:   "Inter", system-ui, sans-serif;
+$headings-font-weight:   700;
+$headings-color:         $bk-navy;
+$h1-font-size:           2.6rem;
+$card-border-width:      0;
+$card-cap-bg:            transparent;
+$border-radius:          .6rem;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body { -webkit-font-smoothing: antialiased; }
+
+/* ============================================================
+   Hero / title banner — network-bg image + dark navy overlay,
+   white text (mirrors the bk-advisors.com home hero)
+   ============================================================ */
+.quarto-title-banner {
+  position: relative;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  background-size: cover;
+  background-position: center;
+}
+.quarto-title-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+              rgba(10, 37, 64, .86) 0%,
+              rgba(13, 110, 253, .72) 100%);
+}
+.quarto-title-banner .quarto-title-block,
+.quarto-title-banner .column-body,
+.quarto-title-banner > .quarto-title { position: relative; z-index: 1; }
+
+.quarto-title-banner .title {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  letter-spacing: -.025em;
+  margin-bottom: .5rem;
+}
+.quarto-title-banner .subtitle,
+.quarto-title-banner .description,
+.quarto-title-banner p {
+  color: rgba(255, 255, 255, .92);
+  font-size: 1.15rem;
+  font-weight: 400;
+  max-width: 46rem;
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+.navbar { box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+.navbar-brand { font-weight: 700; color: $bk-navy; }
+.navbar .nav-link { font-weight: 500; }
+.navbar .nav-link.active { color: $bk-accent !important; font-weight: 700; }
+
+/* ============================================================
+   Listing grid cards
+   ============================================================ */
+.quarto-grid-item.card {
+  box-shadow: 0 .125rem .5rem rgba(10, 37, 64, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.quarto-grid-item.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 .9rem 1.75rem rgba(10, 37, 64, .16);
+}
+.quarto-grid-item .card-img-top,
+.quarto-grid-item img.thumbnail-image {
+  height: 220px;
+  object-fit: cover;
+}
+.quarto-grid-item .listing-title { font-weight: 700; color: $bk-navy; }
+.quarto-grid-item .listing-title:hover { color: $bk-accent; }
+.quarto-grid-item .listing-categories .listing-category {
+  background: rgba(13, 110, 253, .10);
+  color: $bk-blue;
+  border: 0;
+  border-radius: 20px;
+  padding: .25em .9em;
+  font-weight: 600;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+/* Category sidebar — tidy, corporate (no word-cloud sizing) */
+.quarto-listing-category-title { color: $bk-navy; font-weight: 700; }
+.quarto-listing-category .category {
+  font-size: .95rem !important;
+  padding: .15rem 0;
+  color: $bk-ink;
+}
+.quarto-listing-category .category:hover,
+.quarto-listing-category .category.active { color: $bk-accent; }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.nav-footer, .footer { font-size: .9rem; }

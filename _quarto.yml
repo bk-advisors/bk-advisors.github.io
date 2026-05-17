@@ -1,0 +1,72 @@
+project:
+  type: website
+  # Built site goes to docs/. GitHub Pages must be set to serve from
+  # branch: main, folder: /docs  (Settings -> Pages). This is the
+  # supported no-CI deploy path; `output-dir: .` breaks `quarto preview`.
+  output-dir: docs
+  render:
+    - "index.qmd"
+    - "posts/*/index.qmd"
+    # README.md, CLAUDE.md, sandbox/ are deliberately NOT rendered
+  resources:
+    - "assets/**"
+    - "blog/posts/**"     # legacy redirect stubs for already-shared URLs
+    - "lab/**"            # standalone analysis — keep it reachable under /docs
+    - ".nojekyll"
+
+website:
+  title: "BK Advisors — Insights"
+  site-url: "https://bk-advisors.github.io"
+  description: "Expert perspectives on development finance, health financing, and data-driven policy."
+  favicon: assets/bka_simple.png
+  open-graph: true
+  twitter-card: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    background: light
+    logo: assets/BKA_SVG_Logo_Feb2025.svg
+    logo-alt: "BK Advisors"
+    pinned: true
+    left:
+      - text: "Home"
+        href: "https://www.bk-advisors.com/#home"
+      - text: "About"
+        href: "https://www.bk-advisors.com/#about"
+      - text: "Services"
+        href: "https://www.bk-advisors.com/#services"
+      - text: "Insights"
+        href: index.qmd
+      - text: "Our Experience"
+        href: "https://www.bk-advisors.com/#clients"
+      - text: "Contact"
+        href: "https://www.bk-advisors.com/#contact"
+    right:
+      - icon: github
+        href: https://github.com/bk-advisors
+        aria-label: GitHub
+  page-footer:
+    border: false
+    background: dark
+    center: "© 2026 BK Advisors. All Rights Reserved."
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme/brand-light.scss
+    css: theme/styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: false
+    code-overflow: wrap
+    code-tools: false
+    anchor-sections: true
+    smooth-scroll: true
+    html-math-method: katex
+    link-external-newwindow: true
+    link-external-icon: true
+
+execute:
+  freeze: auto
