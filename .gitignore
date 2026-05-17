@@ -9,3 +9,9 @@
 /.quarto/
 
 **/*.quarto_ipynb
+
+# Private / internal — kept locally, NOT published to the public repo
+/CLAUDE.md
+/How-to-Add-a-Blog-Post.md
+/How-to-Add-a-Blog-Post.docx
+/_source/
