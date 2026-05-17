@@ -1,0 +1,23 @@
+/* Small non-Sass tweaks. Brand colors/typography live in brand-light.scss. */
+
+.quarto-grid-item .card-body { padding: 1.1rem 1.25rem; }
+
+.quarto-grid-item .listing-description {
+  color: #6c757d;
+  font-size: .92rem;
+}
+
+/* Post body images: keep readable widths, subtle rounding */
+.quarto-default-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: .375rem;
+}
+
+/* Tighten the listing date */
+.quarto-grid-item .listing-date {
+  color: #6c757d;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}

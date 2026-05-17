@@ -1,4 +1,11 @@
+# RStudio / R cruft
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Quarto project cache (NOT the rendered site — those .html / site_libs / _freeze
+# files are committed on purpose because GitHub Pages serves them directly).
+/.quarto/
+
+**/*.quarto_ipynb
