@@ -2,7 +2,7 @@
 title: "The Cost of Staying Alive in Uganda"
 date: "2025-05-06"
 categories: [Health Financing]
-image: "images/grants-mgt.jpg"
+image: "images/cost-of-staying-alive.png"
 description: "A personal story about what a USD 130 hospital bill reveals about Uganda's health financing."
 toc: false
 ---

@@ -2,7 +2,7 @@
 title: "Trade Under Guard"
 date: "2025-04-13"
 categories: [Trade & Supply Chains]
-image: "images/original_economist_bar.png"
+image: "images/trade-under-guard.png"
 description: "A short story about securing the national interest."
 ---
 

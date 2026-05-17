@@ -26,24 +26,42 @@ beyond Quarto and Git.
 
 # The 4-step workflow
 
-Do everything from the project folder:
-`bk-advisors.github.io`
+## Step 0 — Be in the right folder (do this first, every time)
+
+Every command below must be run from the **project root** —
+the `bk-advisors.github.io` folder itself, **not** from inside `posts` or any
+other sub-folder. If you run them from the wrong place you get errors like
+*"Cannot find path … posts\posts\…"*.
+
+In your terminal, paste this once to move to the project root (keep the quotes):
+
+```
+Set-Location "C:\Users\HP\Desktop\Parking Lot\1 Frequently Used\Web Projects\bk-github\bk-advisors.github.io"
+```
+
+**Check:** the prompt line should now end with `...\bk-advisors.github.io>`
+(it must NOT end with `...\posts>`). Tip: in RStudio, the Terminal already
+opens here — just confirm the prompt before continuing.
 
 ## Step 1 — Create the post folder
 
 Pick a short "slug" (lowercase words joined by hyphens) — this becomes the web
 address, e.g. `the-matthew-effect` → `bk-advisors.github.io/posts/the-matthew-effect/`.
 
-Copy the template into a new folder. In a terminal:
+Copy the template into a new folder. From the project root (see Step 0):
 
 ```
-mkdir posts\the-matthew-effect
 mkdir posts\the-matthew-effect\images
 copy posts\_post-template.qmd posts\the-matthew-effect\index.qmd
 ```
 
+(The first command makes both `posts\the-matthew-effect\` and its `images\`
+sub-folder in one go.)
+
 **Success looks like:** a new folder `posts\the-matthew-effect\` containing
-`index.qmd` and an empty `images` folder.
+`index.qmd` and an empty `images` folder — and **no** `posts\posts\` folder.
+If you ever see a `posts\posts\` folder, you ran Step 1 from inside `posts`;
+delete the stray `posts\posts\` folder and redo from Step 0.
 
 ## Step 2 — Paste your article and fill in the details
 
@@ -83,6 +101,12 @@ website is written into the `docs` folder — that is what gets published.)
 > Tip: while writing, use `quarto preview` instead — it opens the site in your
 > browser and refreshes as you save, so you can see the post and its home-page
 > card before publishing. Press `Ctrl + C` to stop the preview.
+
+> **IMPORTANT — make the post visible.** New posts start **hidden** (the
+> template has a line `draft: true`). While it is there, the post will NOT
+> appear on the home page. When the article is finished and you are happy with
+> the preview, open `index.qmd` and **delete the whole `draft: true` line**,
+> then render again. (Leave it in if you want to keep the post hidden for now.)
 
 ## Step 4 — Publish
 
