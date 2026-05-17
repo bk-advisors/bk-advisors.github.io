@@ -1,13 +1,17 @@
 project:
   type: website
-  output-dir: .          # render in place at repo root (GitHub Pages serves root of main)
+  # Built site goes to docs/. GitHub Pages must be set to serve from
+  # branch: main, folder: /docs  (Settings -> Pages). This is the
+  # supported no-CI deploy path; `output-dir: .` breaks `quarto preview`.
+  output-dir: docs
   render:
     - "index.qmd"
     - "posts/*/index.qmd"
-    # everything else (lab/, sandbox/, blog/ stubs, README.md, CLAUDE.md) is left untouched
+    # README.md, CLAUDE.md, sandbox/ are deliberately NOT rendered
   resources:
     - "assets/**"
     - "blog/posts/**"     # legacy redirect stubs for already-shared URLs
+    - "lab/**"            # standalone analysis — keep it reachable under /docs
     - ".nojekyll"
 
 website:

@@ -16,6 +16,12 @@ update automatically. No more touching the home page by hand.
 A post with no charts (all your LinkedIn articles) needs **no special software**
 beyond Quarto and Git.
 
+> **One-time setup (done once, ever).** On GitHub: open the repository →
+> **Settings → Pages**. Under "Build and deployment" set **Source: Deploy from
+> a branch**, **Branch: `main`**, **Folder: `/docs`**, and Save. You never need
+> to touch this again. (The website is built into the `docs` folder; this tells
+> GitHub to publish that folder.)
+
 \newpage
 
 # The 4-step workflow
@@ -71,7 +77,8 @@ quarto render
 ```
 
 **Success looks like:** it lists each post and ends with
-`Output created: index.html`, with no red error text.
+`Output created: docs\index.html`, with no red error text. (The finished
+website is written into the `docs` folder — that is what gets published.)
 
 > Tip: while writing, use `quarto preview` instead — it opens the site in your
 > browser and refreshes as you save, so you can see the post and its home-page
