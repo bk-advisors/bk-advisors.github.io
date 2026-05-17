@@ -10,7 +10,453 @@
 <atom:link href="https://bk-advisors.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Expert perspectives on development finance, health financing, and data-driven policy.</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 10 Aug 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 10 May 2026 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Maternal Mortality in Africa</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/maternal-health-sdg3/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>In 2023, a woman giving birth in Nigeria was 25 times more likely to die than one giving birth in Cabo Verde.</p>
+<p>Both are African countries, albeit of different sizes, but the gap is still staggering.</p>
+<p>The Sustainable Development Goal 3.1 sets a clear target: fewer than 70 maternal deaths per 100,000 live births by 2030.</p>
+<p>Today, only 4 of 47 African countries meet that target — Cabo Verde (40), Seychelles (42), Algeria (62), and Mauritius (66).</p>
+<p>Meanwhile, Nigeria (993), Chad (748), South Sudan (692), and the Central African Republic (692) report rates that Europe last saw a century ago.</p>
+<p>Maternal mortality isn’t a mystery. We know what works and can save lives: skilled birth attendants, emergency obstetric care, family planning, and the political and financial commitment to deliver them consistently. The four countries that have crossed the SDG line built systems around exactly these basics.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://bk-advisors.github.io/africa-mmr/"><img src="https://bk-advisors.github.io/posts/maternal-health-sdg3/images/cover.png" class="img-fluid figure-img"></a></p>
+<figcaption>African maternal mortality, interactive</figcaption>
+</figure>
+</div>
+<p>➡️ <strong>Explore the interactive chart:</strong> <a href="https://bk-advisors.github.io/africa-mmr/" class="uri">https://bk-advisors.github.io/africa-mmr/</a> — it makes the disparity impossible to look away from.</p>
+<p>The <a href="https://www.linkedin.com/company/beginnings-fund/">Beginnings Fund</a> (<a href="https://beginningsfund.org/" class="uri">https://beginningsfund.org/</a>) and others are doing something about this. No mother should die giving life.</p>
+
+
+
+ ]]></description>
+  <category>Maternal &amp; Child Health</category>
+  <category>Global Health</category>
+  <category>Data &amp; Methods</category>
+  <guid>https://bk-advisors.github.io/posts/maternal-health-sdg3/</guid>
+  <pubDate>Sun, 10 May 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/maternal-health-sdg3/images/cover.png" medium="image" type="image/png" height="180" width="144"/>
+</item>
+<item>
+  <title>Measles in Africa</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/measles-vaccines-work/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>In 1981, measles infected 1.4 million people across Africa in a single year.</p>
+<p>By 2016, that number was 35,000. A 97% drop.</p>
+<p>What happened? The WHO/UNICEF Measles Initiative launched mass immunization campaigns starting in 2001.</p>
+<p>Countries that used to see thousands of cases per million people (e.g.&nbsp;Malawi, Zambia, Niger, Kenya) saw their numbers collapse within a few years.</p>
+<p>It’s one of the most dramatic public health achievements of the last half century. But it’s hard to appreciate something you can no longer see.</p>
+<p>That’s why I built this interactive heatmap. 44 years, 46 countries. You can watch the red tiles fade to blue, country by country, year by year. It makes the invisible visible.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://bk-advisors.github.io/africa-measles/"><img src="https://bk-advisors.github.io/posts/measles-vaccines-work/images/cover.png" class="img-fluid figure-img"></a></p>
+<figcaption>Africa measles heatmap, 1980–2024</figcaption>
+</figure>
+</div>
+<p>➡️ <strong>Explore the interactive chart:</strong> <a href="https://bk-advisors.github.io/africa-measles/" class="uri">https://bk-advisors.github.io/africa-measles/</a></p>
+
+
+
+ ]]></description>
+  <category>Vaccines &amp; Immunisation</category>
+  <category>Global Health</category>
+  <category>Data &amp; Methods</category>
+  <guid>https://bk-advisors.github.io/posts/measles-vaccines-work/</guid>
+  <pubDate>Thu, 23 Apr 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/measles-vaccines-work/images/cover.png" medium="image" type="image/png" height="180" width="144"/>
+</item>
+<item>
+  <title>The Case for HPV Vaccination in PNG</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/hpv-awareness-day/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Today is <strong>International HPV Awareness Day</strong>, and to mark this important day I wanted to share a data-visualization story from a project I worked on last year in Papua New Guinea.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://bk-advisors.github.io/hpv-png-story/"><img src="https://bk-advisors.github.io/posts/hpv-awareness-day/images/cover.png" class="img-fluid figure-img"></a></p>
+<figcaption>The Case for HPV Vaccination in Papua New Guinea</figcaption>
+</figure>
+</div>
+<p>➡️ <strong>Explore the interactive data story:</strong> <a href="https://bk-advisors.github.io/hpv-png-story/" class="uri">https://bk-advisors.github.io/hpv-png-story/</a></p>
+
+
+
+ ]]></description>
+  <category>Vaccines &amp; Immunisation</category>
+  <category>Global Health</category>
+  <category>Data &amp; Methods</category>
+  <guid>https://bk-advisors.github.io/posts/hpv-awareness-day/</guid>
+  <pubDate>Tue, 03 Mar 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/hpv-awareness-day/images/cover.png" medium="image" type="image/png" height="89" width="144"/>
+</item>
+<item>
+  <title>Tax Revenue as the key to Sustainable Health Financing</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/tax-revenue-health-financing/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>There is a woman I buy fruit from, almost every week. She operates from a small wooden stand near my home, and she has been there for as long as I can remember. Mangoes in season, watermelon when it’s hot, jackfruit when she can find it. She knows my order before I say it.</p>
+<p>One afternoon, I asked her – half-curious, half-making conversation – whether she pays any tax. She laughed so hard she nearly knocked over a pile of passion fruits. “Tax?” she said, still grinning. “For what? When my child gets sick, I take her to the health center and there’s no medicine. The road outside has had the same pothole since last year. So what exactly am I paying for?”</p>
+<p>I didn’t have a good answer.</p>
+<p>Her question has stayed with me because it captures something at the core of Uganda’s fiscal problem: a broken social contract. Citizens see no tangible return from their taxes, so they resist paying. The government collects too little, so it can’t deliver. And the cycle repeats.</p>
+<p>As I’ve written this series on health financing, I’ve kept circling back to one question: of all the factors that determine how much a government spends on health – aid, debt, corruption, elections, inequality – which one matters most?</p>
+<p>The answer, when you look at the research, is surprisingly clear. It’s tax revenue.</p>
+<section id="the-8020-rule-of-health-spending" class="level2">
+<h2 class="anchored" data-anchor-id="the-8020-rule-of-health-spending">The 80/20 Rule of Health Spending</h2>
+<p>If you had to pick one factor that predicts how much a government spends on health, the research points in the same direction almost every time: domestic fiscal capacity. In plain terms, that means how much tax a country can collect.</p>
+<p>The logic is almost too simple to feel like an insight. Health spending is recurrent. Doctors need salaries every month. Drug shelves need restocking every quarter. Facilities need maintenance every year. You cannot sustain these with volatile donor aid or one-off windfalls. You need predictable, domestic, recurring money. And the main source of that is taxation.</p>
+<p>I find it useful to think of it as a plumbing problem. Tax revenue is the tap. Budget allocations, the Abuja Declaration targets, donor pledges – those are the buckets. You can arrange the buckets however you like, but if the tap is barely running, they won’t fill.</p>
+<p>Countries at similar income levels but with different tax effort show very different health spending trajectories. Long-run increases in government health expenditure track tax revenue growth, not aid flows. When you apply an 80/20 lens to the factors behind government health spending, fiscal capacity accounts for the bulk. Everything else – institutions, aid, debt, election cycles, demographics – mostly operates through, around, or in the shadow of that one constraint.</p>
+</section>
+<section id="ugandas-anemic-tap" class="level2">
+<h2 class="anchored" data-anchor-id="ugandas-anemic-tap">Uganda’s Anemic Tap</h2>
+<p>So how is Uganda’s tap running? Barely.</p>
+<p>Uganda’s tax-to-GDP ratio has been stuck at around 12–13% for years, below the sub-Saharan African average and well short of the government’s own targets. For every shilling of economic activity in this country, the government collects roughly 13 cents. The rest stays in the informal economy, slips through exemptions, or simply isn’t captured.</p>
+<p>The downstream numbers are predictable. Uganda’s government health spending sits at roughly $23 per person per year (per UNICEF budget analysis; the WHO estimates domestic government health spending at approximately $10 per capita), against a benchmark target of $86. The health budget hovers around 7.7% of the national budget – half of the 15% we committed to under the Abuja Declaration in 2001. As I wrote in my first article in this series, government health spending per person has barely moved in a decade, while Kenya and Rwanda have pulled further and further ahead.</p>
+<p>And here’s the detail that should stop us all. According to UNICEF’s budget analysis, Uganda foregoes an estimated UGX 2.881 trillion in tax revenue every single year through exemptions, allowances, rate reliefs, and deferrals. The government is choosing not to collect this money. For context, the entire approved health budget for FY 2024/25 was UGX 2.946 trillion. We are leaving almost an entire year’s health budget on the table, uncollected.</p>
+<p>Pile on the fact that atleast 54% of Uganda’s economy operates informally – largely outside the tax net – and the picture becomes clearer. The tap is barely open.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/tax-revenue-health-financing/images/tax-vs-health-spending.png" class="img-fluid figure-img"></p>
+<figcaption><em>The relationship between tax collection and government health spending across selected countries</em></figcaption>
+</figure>
+</div>
+</section>
+<section id="an-african-giant-turns-the-tap" class="level2">
+<h2 class="anchored" data-anchor-id="an-african-giant-turns-the-tap">An African Giant Turns the Tap?</h2>
+<p>While Uganda has been standing still on this, Nigeria has started moving.</p>
+<p>In June 2025, President Bola Tinubu signed four tax reform bills into law: the Nigeria Tax Act, the Nigeria Tax Administration Act, the Nigeria Revenue Service Act, and the Joint Revenue Board Act. The ambition is to push Nigeria’s tax-to-GDP ratio to 18% over the medium term – a big jump for a country that, like us, has historically collected far too little.</p>
+<p>What makes the Nigerian reforms interesting is how they try to protect the poor while expanding the base. Small businesses below a certain turnover threshold are exempt from corporate income tax, VAT, and withholding tax. Essential goods – food, healthcare, education – are exempt from VAT. And the share of VAT revenue going to states rose from 50% to 55%, which matters because states are where most health services actually get delivered.</p>
+<p>Nigeria Health Watch pointed out that this expanded fiscal space gives state governments a real opportunity to invest in publicly funded health coverage. They also added a warning: “the fiscal space created by these tax reforms will not remain open forever.” Debt obligations and shifting political priorities will compete for every new naira.</p>
+<p>Nigeria’s reforms have problems of their own, and implementation will be messy. But the underlying principle is sound: widen the tax base, shield the vulnerable, and deliberately channel new revenue toward social services.</p>
+<p>The lesson for Uganda is that this lever exists, and other countries are pulling it. El Salvador offers an even more dramatic example. Between the 1990s and 2015, the country doubled its tax-to-GDP ratio from 8% to 16% and deliberately pushed the new revenue into health. Out-of-pocket health spending fell from 60% to below 30%. Under-five mortality dropped from 53 to 10 per 1,000 live births. That is what happens when you actually open the tap.</p>
+</section>
+<section id="what-can-we-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-we-do">What Can We Do?</h2>
+<p>If tax revenue is the dominant driver of health spending, then this is where the effort has to concentrate. Three things come to mind:</p>
+<section id="broaden-the-tax-base-without-crushing-the-poor" class="level3">
+<h3 class="anchored" data-anchor-id="broaden-the-tax-base-without-crushing-the-poor">1. Broaden the tax base without crushing the poor</h3>
+<p>Uganda’s informal economy is enormous – 54% of GDP – and mostly untaxed. Bringing more of it into the tax net is necessary, but it has to be done with care. Digitize tax systems. Simplify compliance for small and medium enterprises. Reduce the bureaucratic maze that discourages people from even trying. And critically, protect essential goods from tax – food, healthcare, education – so that widening the base does not mean widening the burden on those who can least carry it. Nigeria’s approach on this is worth watching.</p>
+</section>
+<section id="earmark-a-share-of-new-revenue-for-health" class="level3">
+<h3 class="anchored" data-anchor-id="earmark-a-share-of-new-revenue-for-health">2. Earmark a share of new revenue for health</h3>
+<p>Collecting more is only half the problem. The other half is making sure health gets its fair share. Uganda has broken its Abuja Declaration commitment for over twenty years. One mechanism to change that is earmarking: dedicate a specific portion of new tax revenue to health, as a floor, not a ceiling. This creates a direct and visible link between revenue growth and health investment. It also makes it harder for competing priorities to quietly eat the gains, which is what tends to happen when allocation decisions are left entirely to political discretion.</p>
+</section>
+<section id="rebuild-the-social-contract" class="level3">
+<h3 class="anchored" data-anchor-id="rebuild-the-social-contract">3. Rebuild the social contract</h3>
+<p>This is probably the hardest part, and the most important. My fruit vendor has no reason to pay tax if she never sees what it buys. Citizens need to see tangible improvements from the money they contribute – medicine on the shelves, health workers who are actually present, roads that don’t swallow motorcycles. This is a trust problem as much as it is a collection problem. And trust gets rebuilt one visible improvement at a time.</p>
+<p>A UN dialogue on domestic resource mobilization in Uganda identified low public confidence in how government uses funds as one of the biggest barriers to tax compliance. That finding should surprise nobody. Fixing the confidence gap is as urgent as fixing the tax code itself.</p>
+</section>
+</section>
+<section id="the-root-of-the-root" class="level2">
+<h2 class="anchored" data-anchor-id="the-root-of-the-root">The Root of the Root</h2>
+<p>Over these past months, I’ve been writing about why Uganda and much of Africa underinvests in health. Donor displacement. Debt. Corruption. Inequality. Elections. Each piece of the puzzle is real, and each one matters.</p>
+<p>But the more I dig into this, the more I see that they are all branches of the same tree. And the root of that tree is fiscal capacity – how much money the government can actually raise from its own citizens and its own economy. If the tap is dry, it doesn’t much matter how cleverly you arrange the buckets.</p>
+<p>If we get taxation right – broaden the base, protect the poor, direct revenue to health, and give citizens a reason to trust the system – we lay the foundation for everything else. If we don’t, we will keep circling the same problems, decade after decade, with slightly different labels.</p>
+<p>The woman who sells me fruit every week doesn’t need a lecture on fiscal policy. She needs a deal that makes sense: you put something in, and something comes back. A clinic that has medicine. A nurse who shows up. A road without a crater.</p>
+<p>Until we can offer her that deal, the tap stays dry, and the buckets stay empty.</p>
+</section>
+<section id="notes-references" class="level2">
+<h2 class="anchored" data-anchor-id="notes-references">Notes &amp; References</h2>
+<ol type="1">
+<li>World Bank, 2025. <em>Uganda Economic Update: Increasing Uganda’s Fiscal Space through Improved Revenue Mobilization</em>. Available at: <a href="https://www.worldbank.org/en/country/uganda/publication/increasing-uganda-s-fiscal-space-through-improved-revenue-mobilization-and-enhanced-efficiency-of-spending-and-service-d" class="uri">https://www.worldbank.org/en/country/uganda/publication/increasing-uganda-s-fiscal-space-through-improved-revenue-mobilization-and-enhanced-efficiency-of-spending-and-service-d</a></li>
+<li>UNICEF, 2024. <em>Uganda Health Sector Budget Brief 2024/25</em>. Available at: <a href="https://www.unicef.org/esa/media/13261/file/UNICEF-Uganda-Health-Budget-Brief-2023-2024.pdf" class="uri">https://www.unicef.org/esa/media/13261/file/UNICEF-Uganda-Health-Budget-Brief-2023-2024.pdf</a></li>
+<li>UNICEF, 2025. <em>Health Sector Financing: Analysis and Strategic Recommendations (FY2025/26)</em>. Available at: <a href="https://www.unicef.org/uganda/media/20426/file/2025-2026%20Health%20Sector%20Budget%20Brief.pdf" class="uri">https://www.unicef.org/uganda/media/20426/file/2025-2026%20Health%20Sector%20Budget%20Brief.pdf</a></li>
+<li>United Nations Uganda, 2025. <em>Leveraging Domestic Resource Mobilization as a Cornerstone of Uganda’s Sustainable Development Path</em>. Available at: <a href="https://uganda.un.org/en/296986-leveraging-domestic-resource-mobilization-cornerstone-ugandas-sustainable-development-path" class="uri">https://uganda.un.org/en/296986-leveraging-domestic-resource-mobilization-cornerstone-ugandas-sustainable-development-path</a></li>
+<li>Nigeria Health Watch, 2025. <em>Will the 2025 Tax Reform Deliver for Nigeria’s Health System?</em> Available at: <a href="https://articles.nigeriahealthwatch.com/will-the-2025-tax-reform-deliver-for-nigerias-health-system-it-depends-on-how-governments-and-the-rest-of-us-respond/" class="uri">https://articles.nigeriahealthwatch.com/will-the-2025-tax-reform-deliver-for-nigerias-health-system-it-depends-on-how-governments-and-the-rest-of-us-respond/</a></li>
+<li>PwC Nigeria, 2025. <em>The Nigerian Tax Reform Acts</em>. Available at: <a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html" class="uri">https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html</a></li>
+<li>WHO, 2024. <em>Global Health Expenditure Database</em>. Available at: <a href="https://apps.who.int/nha/database" class="uri">https://apps.who.int/nha/database</a></li>
+<li>WHO, 2023. <em>Health Financing Progress Matrix Assessment: Uganda</em>. Available at: <a href="https://library.health.go.ug/sites/default/files/resources/WHO%20HFPM%20Uganda%20FINAL.pdf" class="uri">https://library.health.go.ug/sites/default/files/resources/WHO%20HFPM%20Uganda%20FINAL.pdf</a></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>Tax &amp; Domestic Resource Mobilisation</category>
+  <category>Health Financing</category>
+  <guid>https://bk-advisors.github.io/posts/tax-revenue-health-financing/</guid>
+  <pubDate>Sun, 15 Feb 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/tax-revenue-health-financing/images/cover.png" medium="image" type="image/png" height="114" width="144"/>
+</item>
+<item>
+  <title>The Public Health Cost of General Elections</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/public-health-cost-of-elections/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="when-politics-sets-the-health-calendar" class="level2">
+<h2 class="anchored" data-anchor-id="when-politics-sets-the-health-calendar">When politics sets the health calendar</h2>
+<p>For most of 2025, I have been in meeting rooms in Papua New Guinea talking about a vaccine that many Ugandans have now almost taken for granted: HPV.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/public-health-cost-of-elections/images/png-stakeholders.png" class="img-fluid figure-img"></p>
+<figcaption>Meeting with stakeholders in PNG</figcaption>
+</figure>
+</div>
+<p>PNG has one of the highest cervical cancer burdens in the Asia Pacific region. Recent estimates suggest around 1,053 women are diagnosed with cervical cancer every year and roughly 650 die, in a country with a much smaller population than Uganda. That is like wiping out several extended families every year.</p>
+<p>The evidence is strong that HPV vaccination, combined with screening and treatment, can prevent a large share of these deaths over the coming decades. Statistical modelling shows that scaling up HPV vaccination and cervical screening in countries like PNG could avert tens of thousands of deaths in the long term.</p>
+<p>The science is clear. One of the stumbling blocks, in this case, is general elections.</p>
+<p>A senior health leader in PNG told us very calmly in one planning meeting: if the national HPV campaign does not happen in 2026, it will be extremely difficult to run it in 2027 because of the general elections and the tribal tensions that usually follow. In her view, the next realistic window might only be three years later.</p>
+<p>In practice, this means an entire cohort of girls could pass through adolescence without getting the vaccine on time. Since HPV vaccination is most effective before sexual debut, those missed years translate into a permanently higher lifetime risk of cervical cancer for that group.</p>
+<p>That experience in PNG made something click for me. Elections are not just moments when our political leaders change (or not). They quietly decide who lives long enough to see those leaders govern.</p>
+</section>
+<section id="elections-as-public-health-events" class="level2">
+<h2 class="anchored" data-anchor-id="elections-as-public-health-events">Elections as public health events</h2>
+<p>If you zoom out from PNG and Uganda and look at the wider literature, a pattern starts to appear. Whenever there is serious political unrest or conflict, routine health services tend to suffer. This is the underlying thesis for this article, which is backed by systematic reviews of conflict settings that show drops in vaccination coverage and increases in vaccine preventable disease outbreaks when insecurity disrupts outreach and facility services.</p>
+<p>Uganda is not in a civil war, but our elections bring their own version of instability. The 2021 elections were described by Human Rights Watch as marred by killings, beatings of opposition supporters, arbitrary arrests and an internet shutdown. Even the Afrobarometer 2025 survey reports that close to half of Ugandans fear intimidation or violence during elections, and many worry about the role of security forces.</p>
+<p>Our neighbors have similar stories. The post election crisis in Kenya in 2007 and 2008 left around 1,133 people dead and orders of magnitude more displaced from their homes. The more recent election violence in Tanzania, also saw a reported 500 people killed. Elections can be scheduled on a calendar, but the human consequences spill out for years.</p>
+<p><img src="https://bk-advisors.github.io/posts/public-health-cost-of-elections/images/election-violence.jpg" class="img-fluid"></p>
+<p>With that backdrop, let me unpack three ways elections show up as a public health issue: in lives lost, in disrupted care and in frozen policy.</p>
+</section>
+<section id="lives-lost-and-mental-health-scars" class="level2">
+<h2 class="anchored" data-anchor-id="lives-lost-and-mental-health-scars">1. Lives lost and mental health scars</h2>
+<p>The most visible cost is the people who never come back home.</p>
+<p>In Uganda, at least 54 people were killed in November 2020 when security forces cracked down on protests after the arrest of opposition politician Bobi Wine. Those numbers are not abstract to families who buried loved ones. Add on other incidents around campaigns and polling days, and elections start to look like a recurring risk factor for young men in particular.</p>
+<p>What we rarely talk about is the mental health side. Exposure to political violence, even if you are not physically injured, is linked in many studies to higher rates of anxiety, depression and post traumatic stress symptoms. Children who see their parents beaten or arrested do not simply “move on”. Their sense of safety in the world shrinks.</p>
+<p>Uganda already has a large unmet need for mental health care, with few specialists and limited services outside a handful of facilities. Election related violence adds one more layer to that backlog.</p>
+</section>
+<section id="disrupted-access-and-broken-supply-chains" class="level2">
+<h2 class="anchored" data-anchor-id="disrupted-access-and-broken-supply-chains">2. Disrupted access and broken supply chains</h2>
+<p>Even when bullets are not flying, fear changes behavior. In the run up to tense elections, people often stay home more. They avoid being out at night. They delay any trip that feels optional. In health terms, that matters.</p>
+<p>I sometimes imagine an expectant mother in the more rural parts of my home district of Wakiso. She has been advised to deliver at a facility, but her due date is close to the election and there are rumors of roadblocks and protests on her road. She weighs the risk of travelling while there might be protests or tear gas against the risk of staying home. That is a public health decision shaped almost entirely by politics.</p>
+<p>We know from other settings that insecurity is associated with reduced facility visits, lower vaccination uptake and interruptions in chronic disease treatment. Uganda saw similar dynamics when Covid related enforcement operations turned violent, including beatings and shootings by security forces. The message many people heard was simple: being outside can be dangerous.</p>
+<p>On top of that, staff may struggle to reach facilities when transport is disrupted or when they themselves fear being caught in violence. Supply trucks can be delayed if major roads are blocked or if security operations intensify. A two week delay in ARVs or TB drugs can have lifelong consequences for patients.</p>
+</section>
+<section id="policy-paralysis-and-budget-drift" class="level2">
+<h2 class="anchored" data-anchor-id="policy-paralysis-and-budget-drift">3. Policy paralysis and budget drift</h2>
+<p>The third impact feels more technical, but it is very real.</p>
+<p>Big health reforms and campaigns rely on long, boring, bureaucratic work: drafting guidelines, costing plans, pushing procurement, negotiating budget lines. Election seasons interrupt that slow grind. Officials become cautious. Difficult decisions get postponed. New initiatives are quietly shifted to “after elections”.</p>
+<p>You can see this in PNG, where planners worry that a national HPV rollout will not be feasible in the same year as general elections. Modelling suggests that delaying HPV vaccination by several years can significantly reduce the number of cervical cancer deaths averted by 2070 and beyond. That is what a policy pause looks like in health terms: a flatter line on the “deaths prevented” graph.</p>
+<p>Budgets can also drift. Election years often see more money and attention move toward security and highly visible infrastructure. Analyses of electoral violence in Uganda describe it as a recurring threat to human security that shapes how the state deploys its resources. Each shilling moved away from essential medicines or health workers is a choice, even if it is never debated in public.</p>
+</section>
+<section id="why-being-apolitical-is-hard-when-you-care-about-public-health" class="level2">
+<h2 class="anchored" data-anchor-id="why-being-apolitical-is-hard-when-you-care-about-public-health">Why “Being Apolitical” is hard when you care about public health</h2>
+<p>So what does this mean for someone like my niece, or for you reading this?</p>
+<p>You do not have to attend rallies or wear party colors to be involved in politics. If you care about whether an ambulance can reach your home during unrest, or whether your child gets a vaccine on time, you are already in the political conversation, whether you like it or not.</p>
+<p>Elections influence:</p>
+<ul>
+<li>How safe it feels to move to a health facility.</li>
+<li>Whether critical campaigns, like HPV or polio, go ahead on schedule.</li>
+<li>How budgets are divided between treating disease and controlling dissent.</li>
+</ul>
+<p>Being “apolitical” in that context often just means being silent about decisions that still shape your health.</p>
+<p>That does not mean everyone must turn into a full time activist. It can simply mean asking different questions. When parties and candidates come to your community, you can ask how they plan to keep health workers and patients safe during campaigns. You can ask what safeguards exist to prevent budget cuts to health in election years. You can insist that peaceful elections are part of a healthy society, not an optional extra.</p>
+<p>My hope for Uganda in January 2026 is simple. I want an election where hospitals remain functional, where health centers stay open without fear, and where children can look at a red roof and see only paint, not a threat.</p>
+<p>Happy holidays everyone and stay safe.</p>
+</section>
+<section id="notes-references" class="level2">
+<h2 class="anchored" data-anchor-id="notes-references">Notes &amp; References</h2>
+<ul>
+<li><a href="https://hpvcentre.net/statistics/reports/PNG.pdf" class="uri">https://hpvcentre.net/statistics/reports/PNG.pdf</a></li>
+<li><a href="https://www.cfr.org/report/electoral-violence-kenya" class="uri">https://www.cfr.org/report/electoral-violence-kenya</a></li>
+<li><a href="https://www.hrw.org/news/2021/01/21/uganda-elections-marred-violence" class="uri">https://www.hrw.org/news/2021/01/21/uganda-elections-marred-violence</a></li>
+<li><a href="https://www.bbc.com/news/articles/cz0x8vdvkjgo" class="uri">https://www.bbc.com/news/articles/cz0x8vdvkjgo</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Global Health</category>
+  <category>Political Economy</category>
+  <guid>https://bk-advisors.github.io/posts/public-health-cost-of-elections/</guid>
+  <pubDate>Mon, 08 Dec 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/public-health-cost-of-elections/images/cover.png" medium="image" type="image/png" height="80" width="144"/>
+</item>
+<item>
+  <title>The Matthew Effect</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/the-matthew-effect/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>There’s a well-known line in the Gospel of Matthew (The Parable of The Talents) that reads:</p>
+<blockquote class="blockquote">
+<p><em>“For unto everyone who has, more will be given, and he will have an abundance. But from him who has not, even what he has will be taken away.” — Matthew 25:29</em></p>
+</blockquote>
+<p>I don’t mean to start this post with a sermon, but it’s a verse that runs through my head constantly as I write about topics I care about, especially: the need to direct more impact investments toward the social sector.</p>
+<p>I reflect on this passage because it so accurately describes a core feature of our world: how wealth, power, and opportunity gradually concentrate in the hands of a few (“the haves”), often leaving the majority (the “have-nots”) perpetually behind, through arguably and in many cases, no fault of their own.</p>
+<p>And it’s not an accident - it’s a feature of our current financial and economic system that is designed to concentrate extreme wealth in the hands of a few. In this post, I want to explore why this happens and what the broader implications are.</p>
+<section id="cumulative-advantage" class="level2">
+<h2 class="anchored" data-anchor-id="cumulative-advantage">Cumulative Advantage</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/the-matthew-effect/images/capital-21st-century.png" class="img-fluid figure-img"></p>
+<figcaption>Capital in the Twenty-First Century</figcaption>
+</figure>
+</div>
+<p>One of the best books I’ve read on this is “Capital in the 21st Century” by French economist Thomas Piketty. His core thesis, backed by extensive historical data, reveals two key points:</p>
+<ol type="1">
+<li><p>The Rate of Return on Capital (R) - the money generated by owning assets like stocks in companies, government bonds/T-bills, and real estate - has consistently outpaced…</p></li>
+<li><p>…the Rate of Economic Growth (g) - the growth of the wider economy, which dictates wage increases for most people.</p></li>
+</ol>
+<p>In short, Piketty’s famous formula is R &gt; g.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/the-matthew-effect/images/r-greater-than-g.png" class="img-fluid figure-img"></p>
+<figcaption>R &gt; g</figcaption>
+</figure>
+</div>
+<p>This simple inequality equation is the engine driving the widening wealth gap.</p>
+<p>Like many in my network, you are probably on the “have” side of this equation. You likely possess assets, forms of “Capital”, such as a university education, real estate, investment portfolios, or even strong professional connections. These assets tend to grow, accumulate, and compound over time, steadily increasing your wealth.</p>
+<p>However, for those who do not own such capital, their primary path to a better income is through wages, which are tied to economic growth (g). When ‘g’ stagnates at 3-5% per year while ‘R’ compounds at a higher rate (e.g.&nbsp;10+%), you can visualize the widening gap.</p>
+<p>That is the Matthew Effect in action: wealth breeding more wealth for a few.</p>
+<p>Like I’ve shared with many friends and family, this growing inequality isn’t just an inconvenient trend; it’s a ticking time bomb of civil unrest that, if not rebalanced, threatens everyone’s wellbeing.</p>
+</section>
+<section id="the-reverse-matthew-effect" class="level2">
+<h2 class="anchored" data-anchor-id="the-reverse-matthew-effect">The Reverse Matthew Effect</h2>
+<p>But there’s a second, more devastating part to that verse: <em>“…from him who has not, even what he has will be taken away.”</em></p>
+<p>This is the reverse effect, and it describes the profound vulnerability of those on the “have-not” side of the equation.</p>
+<p>I’m reminded of the tragedy that occurred at the Kiteezi landfill here in Kampala, last year, where a collapse of the waste dump tragically killed over 30 people.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/the-matthew-effect/images/kiteezi-landfill.png" class="img-fluid figure-img"></p>
+<figcaption>Kiteezi</figcaption>
+</figure>
+</div>
+<p>Let’s think about this in the context of the Matthew Effect. These individuals were the definition of “him who has not.” They possessed almost no financial capital. What little they “had” was their physical presence, their proximity to a meager livelihood (scavenging recyclable materials), and, in the most basic sense, their lives.</p>
+<p>The system they existed in was not only failing to provide them with opportunities (the ‘g’ in Piketty’s formula) but was actively dangerous. When the landfill collapsed, the system didn’t just fail them; it took away everything - even the little they had.</p>
+<p>This is a cumulative dis-advantage. It’s not just that the poor get left behind; it’s that they are disproportionately exposed to systemic shocks like environmental disasters, health crises, and economic downturns. They have no “capital” to buffer them from catastrophe. When a crisis hits, it doesn’t just halt their progress; it erases it, sending them tumbling backward, often irretrievably.</p>
+</section>
+<section id="rebalancing-the-equation" class="level2">
+<h2 class="anchored" data-anchor-id="rebalancing-the-equation">Rebalancing the Equation</h2>
+<p>This brings me back to why I write these articles. Our current system, as described by the Matthew Effect (R &gt; g), excels at creating and compounding private wealth. It is, by its very design, incapable of solving the problems of the “have-nots” or protecting them from the “Reverse Matthew Effect.”</p>
+<p>Waiting for economic growth (g) to “trickle down” is not a solution; it’s a passive acceptance of the gap.</p>
+<p>This is where the social sector and impact investing become critical. They are not charity in the old-fashioned sense. They are a tool for rebalancing.</p>
+<p>Directing capital to social enterprises, non-profits, and community initiatives is a conscious choice to build buffers for the vulnerable. It’s about investing in resilience, creating opportunity where the market tends to see none, and building systems (like better housing, better education, and access to healthcare) that can potentially prevent tragedies like Kiteezi from re-occuring.</p>
+<p>Governments must also adopt a more progressive tax policy to curb extreme wealth concentration and increase revenues to allocate more domestic investment into the social sector.</p>
+<p>We, “the haves,” cannot insulate ourselves from the consequences of a world defined by this stark divide. Rebalancing the system isn’t just an act of compassion, it’s really an act of collective survival. It is the only way to defuse the ticking time bomb and build an economy and systems that offers true abundance, not just for a few, but for all.</p>
+<p><em>“…to whom much is given, much is expected.” — Luke 12:48.</em></p>
+</section>
+<section id="notes-references" class="level2">
+<h2 class="anchored" data-anchor-id="notes-references">Notes &amp; References</h2>
+<ul>
+<li>Piketty, Thomas. <em>Capital in the Twenty-First Century</em>. Translated by Arthur Goldhammer, Belknap Press, 2017.</li>
+<li><a href="https://www.dw.com/en/uganda-learns-hard-lessons-from-fatal-garbage-landslide/a-69995224" class="uri">https://www.dw.com/en/uganda-learns-hard-lessons-from-fatal-garbage-landslide/a-69995224</a></li>
+<li><a href="https://pudding.cool/2022/12/yard-sale/" class="uri">https://pudding.cool/2022/12/yard-sale/</a> — a fascinating visual essay describing the same idea</li>
+<li><a href="https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century" class="uri">https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century</a></li>
+<li>It’s not lost on me, as I wrote this piece, that my name is “Matthew”, so maybe I have to provide a disclaimer, haha — I have no direct relation to this Effect…</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Political Economy</category>
+  <category>Global Health</category>
+  <guid>https://bk-advisors.github.io/posts/the-matthew-effect/</guid>
+  <pubDate>Tue, 04 Nov 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/the-matthew-effect/images/cover.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Why do honest people become corrupt politicians?</title>
+  <dc:creator>Matthew Kuch</dc:creator>
+  <link>https://bk-advisors.github.io/posts/honest-people-corrupt-politicians/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Agnes Nandutu’s career as a journalist was as respected and successful as they come.</p>
+<p>She hosted and voiced over a popular TV segment called “Point Blank” that poked fun at Ugandan politicians with the kind of satire and comedic timing that made us, her loyal audience, tear up with laughter. In the early 2010s, she was the rare kind of public figure we trusted to speak truth to power and make us laugh along the way.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/honest-people-corrupt-politicians/images/point-blank.png" class="img-fluid figure-img"></p>
+<figcaption>NTV’s Point Blank</figcaption>
+</figure>
+</div>
+<p>In 2021, she decided to turn the popularity into a run for Parliament, representing her home district of Bududa, and she won!</p>
+<p>But not only that, President Museveni added some icing on her cake and appointed her State Minister for Karamoja affairs, responsible for one of Uganda’s poorest regions.</p>
+<p>She was truly on the rise.</p>
+<p>Then in 2023, a corruption scandal broke. Roofing iron sheets, meant to build homes for the poor in Karamoja, had been misappropriated.</p>
+<p>At the center of it all: Agnes. The once honest journalist admitted her involvement.</p>
+<p>The question many of us asked was: How does someone go from exposing politicians on TV to practicing those same vices, once in office?</p>
+<p>The rapper Ice-T said it best - “Don’t hate the playa, hate the game”, which still applies in this case. The game of journalism is different from the game of politics.</p>
+<p>And the key to understanding corrupt behavior in politics does not lie solely in the individual. It primarily lies in the system of incentives in the political arena.</p>
+<p>Coincidentally, one of the tools that we can use to analyze the decision making process of politicians is called, “Game Theory”.</p>
+<section id="what-is-game-theory" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-game-theory">What is Game Theory?</h2>
+<p>At its core, Game Theory is the study of strategic decision-making. Think of it like a game of chess. Your best move depends entirely on the move you expect your opponent to make. It’s a framework for analyzing situations where the outcome of your choices depends on the choices of others.</p>
+<p>In any “game,” players want to maximize their payoffs, whether that payoff is money, power, or simply winning. Game Theory helps us understand why a rational person might make a seemingly irrational or immoral choice, simply because the rules and the other players’ expected actions make it the most logical move for them personally.</p>
+<p>One of the most famous concepts in Game Theory is the Prisoner’s Dilemma, and it perfectly illustrates the political trap Agnes Nandutu and others find themselves in.</p>
+<section id="the-prisoners-dilemma" class="level3">
+<h3 class="anchored" data-anchor-id="the-prisoners-dilemma">The prisoner’s dilemma</h3>
+<p>The classic Prisoner’s Dilemma goes like this: Two partners in crime are arrested and held in separate cells, with no way to communicate. The prosecutor offers each of them the same deal:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/honest-people-corrupt-politicians/images/prisoners-dilemma.png" class="img-fluid figure-img"></p>
+<figcaption>Prisoner’s Dilemma</figcaption>
+</figure>
+</div>
+<ul>
+<li>If you confess and implicate your partner, and your partner stays silent, you go free. Your partner gets 10 years in prison.</li>
+<li>If you both stay silent, you both get a minor charge, serving only 1 year.</li>
+<li>If you both confess and implicate each other, you both get 5 years.</li>
+</ul>
+<p>What would you do?</p>
+<p>From a collective standpoint, the best outcome is for both to stay silent (cooperate with each other) and serve only one year. But from an <em>individual</em> standpoint, that’s a huge risk. What if your partner rats you out to save themselves? Then you’re the idiot who gets 10 years.</p>
+<p>No matter what your partner does, confessing (or “snitching”) always seems like the safer bet for you personally. If they stay silent, you go free. If they confess, you get 5 years instead of 10. The result? Both prisoners, acting in their own rational self-interest, confess and end up with a worse outcome than if they had just trusted each other.</p>
+<p>This is the game many politicians are forced to play.</p>
+</section>
+<section id="the-politicians-dilemma" class="level3">
+<h3 class="anchored" data-anchor-id="the-politicians-dilemma">The politician’s dilemma</h3>
+<p>Let’s reframe the Prisoner’s Dilemma for a Ugandan politician. The choices aren’t about confessing or staying silent; they are about being Honest or being Corrupt.</p>
+<ul>
+<li><strong>Be Honest:</strong> You refuse to divert public funds, follow every procurement rule, and wait for the slow-moving official government programs to (maybe) reach your constituents.</li>
+<li><strong>Be Corrupt:</strong> You divert resources (like those iron sheets) to directly benefit your voters, support networks, and personal coffers.</li>
+</ul>
+<p>Now, let’s look at the payoffs in a political system with weak institutions and high public expectations:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bk-advisors.github.io/posts/honest-people-corrupt-politicians/images/politicians-dilemma.png" class="img-fluid figure-img"></p>
+<figcaption>Politician’s Dilemma</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><p><strong>You are Honest, but other politicians are Corrupt:</strong> This is the “idiot’s payoff”. While you wait for official channels, other MPs are delivering tangible goods to <em>their</em> people. They are building schools, paying funeral expenses, and handing out cash. At the next election, your constituents see you as ineffective and useless. You followed the rules, but you lost the game. You are voted out.</p></li>
+<li><p><strong>You are Corrupt, and other politicians are Honest:</strong> This is the jackpot. You gain a massive advantage, looking like a hero who “delivers” for your people while others seem slow and bureaucratic. Your political survival is almost guaranteed.</p></li>
+<li><p><strong>Everyone is Honest:</strong> This would be the ideal outcome for the country. Public services improve for everyone, and trust in the government grows. However, for an individual politician, it means you can’t outshine your rivals with patronage.</p></li>
+<li><p><strong>Everyone is Corrupt:</strong> This is the political reality in many places. The country as a whole suffers, but for the individual politician, it’s the rational choice for survival. You get the resources to satisfy immediate constituent demands, secure your position, and compete with your peers who are doing the exact same thing. The risk of getting caught is low, and the risk of being an honest but “ineffective” politician is career suicide.</p></li>
+</ol>
+<p>I like to think of the old Agnes Nandutu, the journalist, as a “match commentator” of sorts. Her incentive was to expose the fouls in the game. But when she became a player on the field, a MP, the incentives flipped entirely. Her survival as a politician, her ability to meet the demands of her constituents in Bududa, and her standing among her peers all depended on playing the game by its unwritten, dare I say - corrupt rules.</p>
+<p>Her choice to divert those iron sheets wasn’t necessarily a sudden moral collapse. It was a calculated move in a system where the incentives overwhelmingly reward corruption and punish honesty. To fix the problem, we can’t just focus on the morality of the players - that’s an attribution fallacy. We have to change the rules of the game itself - by strengthening institutions, demanding accountability, and rewarding transparency, thereby making honesty the truly rational choice.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Political Economy</category>
+  <guid>https://bk-advisors.github.io/posts/honest-people-corrupt-politicians/</guid>
+  <pubDate>Mon, 06 Oct 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://bk-advisors.github.io/posts/honest-people-corrupt-politicians/images/cover.png" medium="image" type="image/png" height="92" width="144"/>
+</item>
 <item>
   <title>When 1 + 1 is NOT equal to 2.</title>
   <dc:creator>Matthew Kuch</dc:creator>

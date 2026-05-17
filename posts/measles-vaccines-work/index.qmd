@@ -1,0 +1,23 @@
+---
+title: "Measles in Africa"
+date: "2026-04-24"
+categories: [Vaccines & Immunisation, Global Health, Data & Methods]
+image: "images/cover.png"
+description: "From 1.4 million measles cases in 1981 to 35,000 by 2016 — an interactive heatmap of one of the great public-health achievements."
+---
+
+In 1981, measles infected 1.4 million people across Africa in a single year.
+
+By 2016, that number was 35,000. A 97% drop.
+
+What happened? The WHO/UNICEF Measles Initiative launched mass immunization campaigns starting in 2001.
+
+Countries that used to see thousands of cases per million people (e.g. Malawi, Zambia, Niger, Kenya) saw their numbers collapse within a few years.
+
+It's one of the most dramatic public health achievements of the last half century. But it's hard to appreciate something you can no longer see.
+
+That's why I built this interactive heatmap. 44 years, 46 countries. You can watch the red tiles fade to blue, country by country, year by year. It makes the invisible visible.
+
+[![Africa measles heatmap, 1980–2024](images/cover.png)](https://bk-advisors.github.io/africa-measles/)
+
+➡️ **Explore the interactive chart:** <https://bk-advisors.github.io/africa-measles/>
