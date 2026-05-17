@@ -2,7 +2,8 @@
 title: "Insights & Analysis"
 subtitle: "Expert perspectives on development finance, health financing, and data-driven policy."
 page-layout: full
-title-block-banner: true
+title-block-banner: "assets/network-bg.jpg"
+title-block-banner-color: "white"
 listing:
   id: posts-listing
   contents: "posts/*/index.qmd"
@@ -11,7 +12,7 @@ listing:
   sort: "date desc"
   sort-ui: true
   filter-ui: true
-  categories: cloud
+  categories: true
   fields: [image, date, title, description, categories, reading-time]
   feed:
     title: "BK Advisors — Insights"
